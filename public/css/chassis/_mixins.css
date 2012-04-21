@@ -1,0 +1,14 @@
+/* Mixins.scss
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
+/* line 18, source/scss/chassis/_mixins.scss */
+.clearfix {
+  zoom: 1; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .clearfix:after {
+    clear: both; }

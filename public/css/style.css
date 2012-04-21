@@ -1,0 +1,1397 @@
+/*
+ * Chassis v0.5
+ *
+ * Copyright 2011 Coby Chapple
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+/* Mixins.scss
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
+/* line 18, source/scss/chassis/_mixins.scss */
+.clearfix {
+  zoom: 1; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .clearfix:after {
+    clear: both; }
+
+/* line 3, source/scss/chassis/_reset.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 4, source/scss/chassis/_reset.scss */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 100%;
+  line-height: 1;
+  font-family: inherit; }
+
+/* line 5, source/scss/chassis/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 6, source/scss/chassis/_reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 7, source/scss/chassis/_reset.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: ""; }
+
+/* line 17, source/scss/chassis/_reset.scss */
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 24, source/scss/chassis/_reset.scss */
+a:focus {
+  outline: thin dotted; }
+
+/* line 29, source/scss/chassis/_reset.scss */
+a:hover,
+a:active {
+  outline: 0; }
+
+/* line 45, source/scss/chassis/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block; }
+
+/* line 54, source/scss/chassis/_reset.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/* line 63, source/scss/chassis/_reset.scss */
+audio:not([controls]) {
+  display: none; }
+
+/* line 71, source/scss/chassis/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 77, source/scss/chassis/_reset.scss */
+sup {
+  top: -0.5em; }
+
+/* line 80, source/scss/chassis/_reset.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 87, source/scss/chassis/_reset.scss */
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+/* line 100, source/scss/chassis/_reset.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+/* line 107, source/scss/chassis/_reset.scss */
+button,
+input {
+  line-height: normal;
+  *overflow: visible; }
+
+/* line 112, source/scss/chassis/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 119, source/scss/chassis/_reset.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button; }
+
+/* line 123, source/scss/chassis/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 129, source/scss/chassis/_reset.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 132, source/scss/chassis/_reset.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 2, source/scss/chassis/_base.scss */
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: #333333;
+  background: #ddd; }
+
+/* line 10, source/scss/chassis/_base.scss */
+.page {
+  background: #fff;
+  -webkit-box-shadow: 0px 0.125em 0.425em #333333;
+  -moz-box-shadow: 0px 0.125em 0.425em #333333;
+  box-shadow: 0px 0.125em 0.425em #333333; }
+
+/* line 15, source/scss/chassis/_base.scss */
+a {
+  color: #0066dd;
+  text-decoration: none; }
+
+/* line 20, source/scss/chassis/_base.scss */
+p a {
+  color: #262626;
+  border-bottom: 2px solid #cc0000; }
+
+/* line 25, source/scss/chassis/_base.scss */
+h1 {
+  margin-bottom: 0.75em;
+  font-size: 2.8em; }
+
+/* line 26, source/scss/chassis/_base.scss */
+h2 {
+  font-size: 2em; }
+
+/* line 27, source/scss/chassis/_base.scss */
+h3 {
+  font-size: 1.8em; }
+
+/* line 28, source/scss/chassis/_base.scss */
+h4 {
+  font-size: 1.5em; }
+
+/* line 29, source/scss/chassis/_base.scss */
+h5 {
+  font-size: 1.2em; }
+
+/* line 30, source/scss/chassis/_base.scss */
+h6 {
+  font-size: 1em; }
+
+/* line 31, source/scss/chassis/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.25em; }
+  /* line 34, source/scss/chassis/_base.scss */
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-weight: inherit; }
+
+/* line 39, source/scss/chassis/_base.scss */
+.content {
+  padding: 1em; }
+
+/* line 44, source/scss/chassis/_base.scss */
+hr {
+  height: 1px;
+  background: #ccc;
+  border: none;
+  margin-bottom: 1em; }
+
+/* line 51, source/scss/chassis/_base.scss */
+.texture-example {
+  height: 100px;
+  border: 2px solid #fff; }
+
+/* line 9, source/scss/chassis/_patterns.scss */
+.nav {
+  zoom: 1; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav:before, .nav:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav .item, .nav .item a {
+    float: left;
+    margin: 0; }
+
+/* line 11, source/scss/chassis/_patterns.scss */
+.nav-bar {
+  zoom: 1;
+  padding: 0.5em;
+  background-color: #262626;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#4d4d4d), to(#262626));
+  background-image: -moz-linear-gradient(top, #4d4d4d, #262626);
+  background-image: -ms-linear-gradient(top, #4d4d4d, #262626);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4d4d4d), color-stop(100%, #262626));
+  background-image: -webkit-linear-gradient(top, #4d4d4d, #262626);
+  background-image: -o-linear-gradient(top, #4d4d4d, #262626);
+  background-image: linear-gradient(top, #4d4d4d, #262626);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d4d4d', endColorstr='#262626', GradientType=0);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border-color: #262626 #262626 black;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #f5f5f5; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav-bar:before, .nav-bar:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav-bar:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav-bar .item, .nav-bar .item a {
+    float: left;
+    margin: 0; }
+  /* line 16, source/scss/chassis/_patterns.scss */
+  .nav-bar .item {
+    margin-right: 0.5em; }
+    /* line 18, source/scss/chassis/_patterns.scss */
+    .nav-bar .item a {
+      -webkit-border-radius: 0.188em;
+      -moz-border-radius: 0.188em;
+      border-radius: 0.188em;
+      color: #f5f5f5;
+      padding: 0.5em 0.675em; }
+      /* line 22, source/scss/chassis/_patterns.scss */
+      .nav-bar .item a:hover {
+        color: #cc0000;
+        background: #262626; }
+  /* line 29, source/scss/chassis/_patterns.scss */
+  .nav-bar .active a, .nav-bar .active a:hover {
+    background-color: #990000;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(red), to(#990000));
+    background-image: -moz-linear-gradient(top, red, #990000);
+    background-image: -ms-linear-gradient(top, red, #990000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, #990000));
+    background-image: -webkit-linear-gradient(top, red, #990000);
+    background-image: -o-linear-gradient(top, red, #990000);
+    background-image: linear-gradient(top, red, #990000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='red', endColorstr='#990000', GradientType=0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #990000 #990000 #4d0000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 1px 0px #ff6666;
+    color: #333333; }
+
+/* line 37, source/scss/chassis/_patterns.scss */
+.content .nav-bar {
+  -webkit-border-radius: 0.188em;
+  -moz-border-radius: 0.188em;
+  border-radius: 0.188em; }
+
+/* line 41, source/scss/chassis/_patterns.scss */
+.nav-chassis {
+  zoom: 1;
+  background-color: #4d4d4d;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#262626), to(#4d4d4d));
+  background-image: -moz-linear-gradient(top, #262626, #4d4d4d);
+  background-image: -ms-linear-gradient(top, #262626, #4d4d4d);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #262626), color-stop(100%, #4d4d4d));
+  background-image: -webkit-linear-gradient(top, #262626, #4d4d4d);
+  background-image: -o-linear-gradient(top, #262626, #4d4d4d);
+  background-image: linear-gradient(top, #262626, #4d4d4d);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#262626', endColorstr='#4d4d4d', GradientType=0);
+  text-shadow: 0px 1px 2px #000;
+  color: #f5f5f5; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav-chassis:before, .nav-chassis:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav-chassis:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav-chassis .item, .nav-chassis .item a {
+    float: left;
+    margin: 0; }
+  /* line 47, source/scss/chassis/_patterns.scss */
+  .nav-chassis .item a {
+    color: #f5f5f5;
+    padding: 0.75em 1em;
+    font-weight: bold; }
+    /* line 51, source/scss/chassis/_patterns.scss */
+    .nav-chassis .item a:hover {
+      color: #cc0000; }
+  /* line 58, source/scss/chassis/_patterns.scss */
+  .nav-chassis .active a, .nav-chassis .active a:hover {
+    background-color: #990000;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(red), to(#990000));
+    background-image: -moz-linear-gradient(top, red, #990000);
+    background-image: -ms-linear-gradient(top, red, #990000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, red), color-stop(100%, #990000));
+    background-image: -webkit-linear-gradient(top, red, #990000);
+    background-image: -o-linear-gradient(top, red, #990000);
+    background-image: linear-gradient(top, red, #990000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='red', endColorstr='#990000', GradientType=0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #990000 #990000 #4d0000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    text-shadow: 0px 1px 0px #ff6666;
+    color: #333333; }
+
+/* line 65, source/scss/chassis/_patterns.scss */
+.nav-line-top {
+  zoom: 1;
+  background: #333333;
+  color: #c2c2c2; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav-line-top:before, .nav-line-top:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav-line-top:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav-line-top .item, .nav-line-top .item a {
+    float: left;
+    margin: 0; }
+  /* line 69, source/scss/chassis/_patterns.scss */
+  .nav-line-top .item {
+    margin-right: 0.5em; }
+    /* line 71, source/scss/chassis/_patterns.scss */
+    .nav-line-top .item a {
+      border-top: 2px solid #333333;
+      color: #c2c2c2;
+      padding: 0.5em 0.675em; }
+      /* line 75, source/scss/chassis/_patterns.scss */
+      .nav-line-top .item a:hover {
+        background: #4d4d4d;
+        border-top: 2px solid #4d4d4d; }
+  /* line 82, source/scss/chassis/_patterns.scss */
+  .nav-line-top .active a, .nav-line-top .active a:hover {
+    border-top: 2px solid #cc0000;
+    color: #f5f5f5;
+    font-weight: bold; }
+
+/* line 89, source/scss/chassis/_patterns.scss */
+.nav-line-bottom {
+  zoom: 1;
+  background: #333333;
+  color: #c2c2c2; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav-line-bottom:before, .nav-line-bottom:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav-line-bottom:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav-line-bottom .item, .nav-line-bottom .item a {
+    float: left;
+    margin: 0; }
+  /* line 93, source/scss/chassis/_patterns.scss */
+  .nav-line-bottom .item {
+    margin-right: 0.5em; }
+    /* line 95, source/scss/chassis/_patterns.scss */
+    .nav-line-bottom .item a {
+      border-bottom: 2px solid #333333;
+      color: #c2c2c2;
+      padding: 0.5em 0.675em; }
+      /* line 99, source/scss/chassis/_patterns.scss */
+      .nav-line-bottom .item a:hover {
+        background: #4d4d4d;
+        border-bottom: 2px solid #4d4d4d; }
+  /* line 106, source/scss/chassis/_patterns.scss */
+  .nav-line-bottom .active a, .nav-line-bottom .active a:hover {
+    border-bottom: 2px solid #cc0000;
+    color: #f5f5f5;
+    font-weight: bold; }
+
+/* line 115, source/scss/chassis/_patterns.scss */
+.nav-pills {
+  zoom: 1; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav-pills:before, .nav-pills:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav-pills:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav-pills .item, .nav-pills .item a {
+    float: left;
+    margin: 0; }
+  /* line 118, source/scss/chassis/_patterns.scss */
+  .nav-pills .item a {
+    -webkit-border-radius: 0.188em;
+    -moz-border-radius: 0.188em;
+    border-radius: 0.188em;
+    color: #cc0000;
+    padding: 0.5em 0.8em; }
+    /* line 122, source/scss/chassis/_patterns.scss */
+    .nav-pills .item a:hover {
+      color: red; }
+  /* line 128, source/scss/chassis/_patterns.scss */
+  .nav-pills .active a, .nav-pills .active a:hover {
+    background: #cc0000;
+    color: #f5f5f5; }
+
+/* line 135, source/scss/chassis/_patterns.scss */
+.nav-tabs {
+  zoom: 1; }
+  /* line 9, source/scss/chassis/_mixins.scss */
+  .nav-tabs:before, .nav-tabs:after {
+    display: table;
+    content: "";
+    zoom: 1; }
+  /* line 14, source/scss/chassis/_mixins.scss */
+  .nav-tabs:after {
+    clear: both; }
+  /* line 4, source/scss/chassis/_patterns.scss */
+  .nav-tabs .item, .nav-tabs .item a {
+    float: left;
+    margin: 0; }
+  /* line 137, source/scss/chassis/_patterns.scss */
+  .nav-tabs .item {
+    border-bottom: 1px solid #cc0000; }
+    /* line 139, source/scss/chassis/_patterns.scss */
+    .nav-tabs .item a {
+      color: #cc0000;
+      padding: 0.5em 0.8em; }
+      /* line 142, source/scss/chassis/_patterns.scss */
+      .nav-tabs .item a:hover {
+        color: red; }
+  /* line 147, source/scss/chassis/_patterns.scss */
+  .nav-tabs .active {
+    border: 1px solid #cc0000;
+    border-bottom: none;
+    -webkit-border-radius: 0.188em 0.188em 0 0;
+    -moz-border-radius: 0.188em 0.188em 0 0;
+    border-radius: 0.188em 0.188em 0 0; }
+    /* line 148, source/scss/chassis/_patterns.scss */
+    .nav-tabs .active a, .nav-tabs .active a:hover {
+      color: #333333; }
+
+/* line 158, source/scss/chassis/_patterns.scss */
+.nav-bar .container ul, .nav-line-top .container ul, .nav-line-bottom .container ul, .nav-pills .container ul, .nav-tabs .container ul, .nav-chassis .container ul {
+  padding: 0 1em; }
+
+/* line 164, source/scss/chassis/_patterns.scss */
+.clingwrap .nav-bar .container ul, .clingwrap .nav-line-top .container ul, .clingwrap .nav-line-bottom .container ul, .clingwrap .nav-pills .container ul, .clingwrap .nav-tabs .container ul, .clingwrap .nav-chassis .container ul {
+  padding: 0 1em; }
+
+/* line 170, source/scss/chassis/_patterns.scss */
+.hero-unit {
+  font-size: 1.5em;
+  background: #f5f5f5;
+  /*@include box-shadow(inset 0px 0px 2em $dark_primary);*/
+  /*background: $color1; [> Old browsers <]*/
+  background: -moz-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #555555));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
+  /* IE10+ */
+  background: radial-gradient(center, ellipse cover, white 0%, #555555 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+  /* line 175, source/scss/chassis/_patterns.scss */
+  .hero-unit h1, .hero-unit h2 {
+    font-size: 2.2em;
+    line-height: 0.8em; }
+  /* line 179, source/scss/chassis/_patterns.scss */
+  .hero-unit p {
+    margin-bottom: 0.5em; }
+
+/* line 184, source/scss/chassis/_patterns.scss */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e6e6e6;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), color-stop(25%, white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(white, white 25%, #e6e6e6);
+  background-image: -moz-linear-gradient(white, white 25%, #e6e6e6);
+  background-image: -ms-linear-gradient(white, white 25%, #e6e6e6);
+  background-image: -o-linear-gradient(white, white 25%, #e6e6e6);
+  background-image: linear-gradient(white, white 25%, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='white', endColorstr='#e6e6e6', GradientType=0);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  padding: 0.425em 0.75em;
+  color: #333;
+  line-height: normal;
+  border: 1px solid #ccc;
+  border-bottom-color: #bbb;
+  -webkit-border-radius: 0.188em;
+  -moz-border-radius: 0.188em;
+  border-radius: 0.188em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  -ms-transition: 0.1s linear all;
+  -o-transition: 0.1s linear all;
+  transition: 0.1s linear all; }
+  /* line 199, source/scss/chassis/_patterns.scss */
+  .btn:hover {
+    background-position: 0 -1em;
+    color: #333;
+    text-decoration: none; }
+  /* line 206, source/scss/chassis/_patterns.scss */
+  .btn:focus {
+    outline: 1px dotted #666; }
+  /* line 211, source/scss/chassis/_patterns.scss */
+  .btn.primary {
+    color: white;
+    background-color: #660000;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#cc0000), to(#660000));
+    background-image: -moz-linear-gradient(top, #cc0000, #660000);
+    background-image: -ms-linear-gradient(top, #cc0000, #660000);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc0000), color-stop(100%, #660000));
+    background-image: -webkit-linear-gradient(top, #cc0000, #660000);
+    background-image: -o-linear-gradient(top, #cc0000, #660000);
+    background-image: linear-gradient(top, #cc0000, #660000);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc0000', endColorstr='#660000', GradientType=0);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-color: #660000 #660000 #1a0000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border: 1px solid #660000; }
+  /* line 222, source/scss/chassis/_patterns.scss */
+  .btn.active, .btn:active {
+    -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
+  /* line 226, source/scss/chassis/_patterns.scss */
+  .btn.disabled {
+    cursor: default;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    filter: alpha(opacity=65);
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  /* line 233, source/scss/chassis/_patterns.scss */
+  .btn[disabled] {
+    cursor: default;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    filter: alpha(opacity=65);
+    -khtml-opacity: 0.65;
+    -moz-opacity: 0.65;
+    opacity: 0.65;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+  /* line 244, source/scss/chassis/_patterns.scss */
+  .btn.large {
+    font-size: 1.2em;
+    line-height: normal;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em; }
+  /* line 249, source/scss/chassis/_patterns.scss */
+  .btn.small {
+    font-size: 0.8em; }
+
+/* line 1, source/scss/chassis/_textures.scss */
+.texture-wood {
+  background: transparent url(http://subtlepatterns.com/patterns/wood_pattern.png) top left repeat; }
+
+/* line 4, source/scss/chassis/_textures.scss */
+.texture-smallmosaic {
+  background: transparent url(http://subtlepatterns.com/patterns/px_by_Gre3g.png) top left repeat; }
+
+/* line 7, source/scss/chassis/_textures.scss */
+.texture-graph {
+  background: transparent url(http://subtlepatterns.com/patterns/graphy.png) top left repeat; }
+
+/* line 10, source/scss/chassis/_textures.scss */
+.texture-ricepaper {
+  background: transparent url(http://subtlepatterns.com/patterns/ricepaper.png) top left repeat; }
+
+/* line 13, source/scss/chassis/_textures.scss */
+.texture-diagmonds {
+  background: transparent url(http://subtlepatterns.com/patterns/diagmonds.png) top left repeat; }
+
+/* line 16, source/scss/chassis/_textures.scss */
+.texture-zigzag {
+  background: transparent url(http://subtlepatterns.com/patterns/zigzag.png) top left repeat; }
+
+/* line 20, source/scss/chassis/_textures.scss */
+.texture-darkwood {
+  background: transparent url(http://subtlepatterns.com/patterns/dark_wood.png) top left repeat; }
+
+/* line 23, source/scss/chassis/_textures.scss */
+.texture-roughcloth {
+  background: transparent url(http://subtlepatterns.com/patterns/roughcloth.png) top left repeat; }
+
+/* line 26, source/scss/chassis/_textures.scss */
+.texture-dotnoise {
+  background: transparent url(http://subtlepatterns.com/patterns/bgnoise_lg.png) top left repeat; }
+
+/* line 29, source/scss/chassis/_textures.scss */
+.texture-woven {
+  background: transparent url(http://subtlepatterns.com/patterns/woven.png) top left repeat; }
+
+/* line 32, source/scss/chassis/_textures.scss */
+.texture-carbonfibre {
+  background: transparent url(http://subtlepatterns.com/patterns/real_cf.png) top left repeat; }
+
+/* line 35, source/scss/chassis/_textures.scss */
+.texture-type {
+  background: transparent url(http://subtlepatterns.com/patterns/type.png) top left repeat; }
+
+/* line 38, source/scss/chassis/_textures.scss */
+.texture-linedpaper {
+  background: transparent url(http://subtlepatterns.com/patterns/lined_paper.png) top left repeat; }
+
+/* line 41, source/scss/chassis/_textures.scss */
+.texture-crosses {
+  background: transparent url(http://subtlepatterns.com/patterns/crosses.png) top left repeat; }
+
+/* line 44, source/scss/chassis/_textures.scss */
+.texture-blacklinen {
+  background: transparent url(http://subtlepatterns.com/patterns/black_linen_v2.png) top left repeat; }
+
+/* line 47, source/scss/chassis/_textures.scss */
+.texture-brightsquares {
+  background: transparent url(http://subtlepatterns.com/patterns/bright_squares.png) top left repeat; }
+
+/* line 50, source/scss/chassis/_textures.scss */
+.texture-grungewall {
+  background: transparent url(http://subtlepatterns.com/patterns/grunge_wall.png) top left repeat; }
+
+/* line 53, source/scss/chassis/_textures.scss */
+.texture-hanky {
+  background: transparent url(http://subtlepatterns.com/patterns/vichy.png) top left repeat; }
+
+/* line 56, source/scss/chassis/_textures.scss */
+.texture-largemosaic {
+  background-image: url(http://subtlepatterns.com/patterns/random_grey_variations.png) top left repeat; }
+
+/* line 59, source/scss/chassis/_textures.scss */
+.texture-doublelined {
+  background: transparent url(http://subtlepatterns.com/patterns/double_lined.png) top left repeat; }
+
+/* line 62, source/scss/chassis/_textures.scss */
+.texture-pinstripe {
+  background: transparent url(http://subtlepatterns.com/patterns/pinstripe.png) top left repeat; }
+
+/* line 65, source/scss/chassis/_textures.scss */
+.texture-leather {
+  background: transparent url(http://subtlepatterns.com/patterns/leather_1.png) top left repeat; }
+
+/* line 68, source/scss/chassis/_textures.scss */
+.texture-dotgrill {
+  background: transparent url(http://subtlepatterns.com/patterns/carbon_fibre.png) top left repeat; }
+
+/* line 71, source/scss/chassis/_textures.scss */
+.texture-dotgrillbig {
+  background: transparent url(http://subtlepatterns.com/patterns/carbon_fibre_big.png) top left repeat; }
+
+/* line 74, source/scss/chassis/_textures.scss */
+.texture-microcarbon {
+  background: transparent url(http://subtlepatterns.com/patterns/micro_carbon.png) top left repeat; }
+
+/* line 77, source/scss/chassis/_textures.scss */
+.texture-linen {
+  background: transparent url(http://subtlepatterns.com/patterns/whitey.png) top left repeat; }
+
+/*	h1 { font-size: 46px; font-size: 4.6rem; margin-bottom: 12px;}
+	h2 { font-size: 35px; font-size: 3.5rem; margin-bottom: 9px; }
+	h3 { font-size: 28px; font-size: 2.8rem; margin-bottom: 9px; }
+	h4 { font-size: 21px; font-size: 2.1rem; margin-bottom: 3px; }
+	h5 { font-size: 18px; font-size: 1.8rem; font-weight: normal; margin-bottom: 3px;  }
+	h6 { font-size: 15px; font-size: 1.5rem; font-weight: normal; }
+*/
+/* line 8, source/scss/chassis/_typography.scss */
+.subheader {
+  color: #777;
+  font-weight: 300;
+  margin-bottom: 24px; }
+
+/* line 10, source/scss/chassis/_typography.scss */
+p {
+  line-height: 17px;
+  margin: 0 0 18px; }
+
+/* line 11, source/scss/chassis/_typography.scss */
+p img {
+  margin: 0; }
+
+/* line 12, source/scss/chassis/_typography.scss */
+p.lead {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 24px; }
+
+/* line 14, source/scss/chassis/_typography.scss */
+em, i {
+  font-style: italic;
+  line-height: inherit; }
+
+/* line 15, source/scss/chassis/_typography.scss */
+strong, b {
+  font-weight: bold;
+  line-height: inherit; }
+
+/* line 16, source/scss/chassis/_typography.scss */
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+/* line 18, source/scss/chassis/_typography.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small {
+  color: #777; }
+
+/*	Blockquotes  */
+/* line 21, source/scss/chassis/_typography.scss */
+blockquote, blockquote p {
+  line-height: 20px;
+  color: #777; }
+
+/* line 22, source/scss/chassis/_typography.scss */
+blockquote {
+  margin: 0 0 18px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #ddd; }
+
+/* line 23, source/scss/chassis/_typography.scss */
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #555; }
+
+/* line 24, source/scss/chassis/_typography.scss */
+blockquote cite:before {
+  content: "\2014 \0020"; }
+
+/* line 25, source/scss/chassis/_typography.scss */
+blockquote cite a, blockquote cite a:visited {
+  color: #555; }
+
+/* line 27, source/scss/chassis/_typography.scss */
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 12px 0 18px;
+  height: 0; }
+
+/* line 29, source/scss/chassis/_typography.scss */
+abbr, acronym {
+  text-transform: uppercase;
+  font-size: 90%;
+  color: #222;
+  border-bottom: 1px solid #ddd;
+  cursor: help; }
+
+/* line 30, source/scss/chassis/_typography.scss */
+abbr {
+  text-transform: none; }
+
+	/**
+ 	 * Print styles.
+	 *
+	 * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+	 * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+	 */
+@media print {
+  /* line 39, source/scss/chassis/_typography.scss */
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  /* line 41, source/scss/chassis/_typography.scss */
+  p a, p a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+
+  /* line 42, source/scss/chassis/_typography.scss */
+  p a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  /* line 43, source/scss/chassis/_typography.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /* line 44, source/scss/chassis/_typography.scss */
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  /* Don't show links for images, or javascript/internal links */
+  /* line 45, source/scss/chassis/_typography.scss */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  /* line 46, source/scss/chassis/_typography.scss */
+  thead {
+    display: table-header-group; }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  /* line 47, source/scss/chassis/_typography.scss */
+  tr, img {
+    page-break-inside: avoid; }
+
+  @page {
+    margin: 0.5cm; }
+
+  /* line 49, source/scss/chassis/_typography.scss */
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  /* line 50, source/scss/chassis/_typography.scss */
+  h2, h3 {
+    page-break-after: avoid; } }
+@media screen
+and (min-width: 601px) {
+  /*
+  -----------------------------------------------
+  Sections Grid CSS
+  -----------------------------------------------
+  Site Name
+  file:       css/sections.css
+  author:     Stephen Bau
+  date:       2 July 2010
+  -----------------------------------------------
+  A grid system by Craig Zheng designed
+  for publicculture.org and symphony-cms.com.
+  Adapted by Stephen Bau.
+  -----------------------------------------------
+  
+  1) class="section" basically designates a 'row', within which any
+  number of class="subsection" elements represent 'columns'
+  2) The 'column' widths are specified with another class: either
+  "fragment" "simple" "compound" or "complex" (semantic nomenclature I
+  borrowed right from English grammar).
+  
+  So we end up with something like this:
+  
+  	<div class="section">
+  		<div class="subsection simple">
+  		</div>
+  		<div class="subsection compound">
+  		</div>
+  		<div class="subsection simple">
+  		</div>
+  	</div>
+  
+  Which gives you a half-width column in the middle with two
+  quarter-width columns on either side. Of course, you could dispense
+  with the DIVs if you don't need them and just apply those classes to
+  any other block-level elements. The CSS looks like this:
+  
+  */
+  /* line 41, source/scss/chassis/_sections.scss */
+  .clingwrap .page, .container {
+    width: 960px;
+    margin: 0 auto; }
+
+  /* line 45, source/scss/chassis/_sections.scss */
+  .section:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+  /* line 52, source/scss/chassis/_sections.scss */
+  .section {
+    zoom: 1;
+    display: block; }
+
+  /* line 56, source/scss/chassis/_sections.scss */
+  .subsection {
+    float: left;
+    width: 240px; }
+
+  /* 3-column grid */
+  /* line 63, source/scss/chassis/_sections.scss */
+  .thirds .subsection,
+  .thirds .c1 {
+    width: 320.0px; }
+
+  /* line 66, source/scss/chassis/_sections.scss */
+  .thirds .half {
+    width: 160.0px; }
+
+  /* line 69, source/scss/chassis/_sections.scss */
+  .thirds .c2 {
+    width: 640.0px; }
+
+  /* 4-column grid (default) */
+  /* line 74, source/scss/chassis/_sections.scss */
+  .half {
+    width: 120px; }
+
+  /* line 77, source/scss/chassis/_sections.scss */
+  .c1 {
+    width: 240px; }
+
+  /* line 80, source/scss/chassis/_sections.scss */
+  .c2 {
+    width: 480px; }
+
+  /* line 83, source/scss/chassis/_sections.scss */
+  .c3 {
+    width: 720px; }
+
+  /* 5-column grid */
+  /* line 89, source/scss/chassis/_sections.scss */
+  .fifths .subsection,
+  .fifths .c1 {
+    width: 192px; }
+
+  /* line 92, source/scss/chassis/_sections.scss */
+  .fifths .half {
+    width: 96px; }
+
+  /* line 95, source/scss/chassis/_sections.scss */
+  .fifths .c2 {
+    width: 384px; }
+
+  /* line 98, source/scss/chassis/_sections.scss */
+  .fifths .c3 {
+    width: 576px; }
+
+  /* line 101, source/scss/chassis/_sections.scss */
+  .fifths .c4 {
+    width: 768px; } }
+@media screen
+and (min-width: 601px)
+and (max-width: 960px) {
+  /*
+  -----------------------------------------------
+  Sections Grid CSS - Fluid
+  -----------------------------------------------
+  Site Name
+  file:		css/text.css
+  author:		Stephen Bau
+  date:		2 July 2010
+  -----------------------------------------------
+  A grid system by Craig Zheng designed
+  for publicculture.org and symphony-cms.com.
+  Adapted by Stephen Bau.
+  ----------------------------------------------- */
+  /* line 18, source/scss/chassis/_sections-fluid.scss */
+  .clingwrap .page, .container {
+    width: auto; }
+
+  /* line 21, source/scss/chassis/_sections-fluid.scss */
+  .section {
+    overflow: hidden;
+    clear: both; }
+
+  /* line 25, source/scss/chassis/_sections-fluid.scss */
+  .subsection {
+    float: left;
+    width: 25%; }
+
+  /* 3-column grid */
+  /* line 32, source/scss/chassis/_sections-fluid.scss */
+  .thirds .subsection,
+  .thirds .c1 {
+    width: 33.3333%; }
+
+  /* line 35, source/scss/chassis/_sections-fluid.scss */
+  .thirds .half {
+    width: 16.6666%; }
+
+  /* line 38, source/scss/chassis/_sections-fluid.scss */
+  .thirds .c2 {
+    width: 66.6666%; }
+
+  /* 4-column grid (default) */
+  /* line 43, source/scss/chassis/_sections-fluid.scss */
+  .half {
+    width: 12.5%; }
+
+  /* line 46, source/scss/chassis/_sections-fluid.scss */
+  .c1 {
+    width: 25%; }
+
+  /* line 49, source/scss/chassis/_sections-fluid.scss */
+  .c2 {
+    width: 50%; }
+
+  /* line 52, source/scss/chassis/_sections-fluid.scss */
+  .c3 {
+    width: 75%; }
+
+  /* 5-column grid */
+  /* line 58, source/scss/chassis/_sections-fluid.scss */
+  .fifths .subsection,
+  .fifths .c1 {
+    width: 20%; }
+
+  /* line 61, source/scss/chassis/_sections-fluid.scss */
+  .fifths .half {
+    width: 10%; }
+
+  /* line 64, source/scss/chassis/_sections-fluid.scss */
+  .fifths .c2 {
+    width: 40%; }
+
+  /* line 67, source/scss/chassis/_sections-fluid.scss */
+  .fifths .c3 {
+    width: 60%; }
+
+  /* line 70, source/scss/chassis/_sections-fluid.scss */
+  .fifths .c4 {
+    width: 80%; } }
+/*
+-----------------------------------------------
+Grids: Sections CSS - Display
+----------------------------------------------- */
+/* colors
+-----------------------------------------------
+This section has been commented out to display
+colors only on hover. Uncomment this section
+and comment out the next section to display
+colors by default and black on hover.
+----------------------------------------------- */
+/* line 13, source/scss/chassis/_display-grids.scss */
+.display-grids .content p {
+  background: #f7941d;
+  color: #fff; }
+
+/* line 17, source/scss/chassis/_display-grids.scss */
+.display-grids .half p {
+  background: #8dc63f; }
+
+/* line 20, source/scss/chassis/_display-grids.scss */
+.display-grids .c1 p {
+  background: #00aef0; }
+
+/* line 23, source/scss/chassis/_display-grids.scss */
+.display-grids .c2 p {
+  background: #92278f; }
+
+/* line 26, source/scss/chassis/_display-grids.scss */
+.display-grids .c3 p {
+  background: #ec008c; }
+
+/* line 29, source/scss/chassis/_display-grids.scss */
+.display-grids .c4 p {
+  background: #f00; }
+
+/* hover colors
+----------------------------------------------- */
+/* line 37, source/scss/chassis/_display-grids.scss */
+.display-grids .content:hover,
+.display-grids .subsection:hover {
+  background: #eee; }
+
+/* line 41, source/scss/chassis/_display-grids.scss */
+.display-grids .content:hover p,
+.display-grids .subsection:hover p {
+  background: #000; }
+
+/* spacing
+----------------------------------------------- */
+/* line 48, source/scss/chassis/_display-grids.scss */
+.display-grids .content p {
+  padding: 10px 14px;
+  margin: 0; }
+
+/* effects (rounded corners)
+----------------------------------------------- */
+/* line 57, source/scss/chassis/_display-grids.scss */
+.display-grids .content,
+.display-grids .subsection {
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px; }
+
+/* line 62, source/scss/chassis/_display-grids.scss */
+.display-grids .content p {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px; }
+
+/*
+-----------------------------------------------
+Responsive CSS
+-----------------------------------------------
+Site Name
+file:       css/responsive.css
+author:     Stephen Bau
+date:       21 September 2011
+----------------------------------------------- */
+/* fluid images
+----------------------------------------------- */
+/* line 13, source/scss/chassis/_responsive.scss */
+img {
+  max-width: 100%; }
+
+/*
+--------------------------------------------------
+Large and Medium Screens (above 750 pixels wide)
+-------------------------------------------------- */
+@media only screen and (min-width: 750px) {
+  /* line 24, source/scss/chassis/_responsive.scss */
+  .masthead h1 br {
+    display: none; } }
+@media only screen and (min-width: 960px) {
+  /* line 32, source/scss/chassis/_responsive.scss */
+  .clingwrap {
+    padding: 2em inherit; } }
+/*
+--------------------------------------------------
+Medium Screens (below 960 pixels wide)
+-------------------------------------------------- */
+@media only screen and (max-width: 960px) {
+  /* line 46, source/scss/chassis/_responsive.scss */
+  .masthead .lead br {
+    display: none; }
+
+  /* topbar navigation
+  ----------------------------------------------- */
+  /* line 52, source/scss/chassis/_responsive.scss */
+  .topbar {
+    height: auto;
+    position: static; }
+
+  /* line 56, source/scss/chassis/_responsive.scss */
+  .topbar .container {
+    width: auto; }
+
+  /* line 59, source/scss/chassis/_responsive.scss */
+  .topbar .brand {
+    float: left;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: #000; }
+
+  /* line 66, source/scss/chassis/_responsive.scss */
+  .topbar div > ul {
+    margin: 0; }
+
+  /* line 69, source/scss/chassis/_responsive.scss */
+  .topbar .nav {
+    float: none; }
+
+  /* line 72, source/scss/chassis/_responsive.scss */
+  .topbar .nav > li {
+    float: left;
+    width: 16.6666666%;
+    margin: 0; }
+
+  /* line 77, source/scss/chassis/_responsive.scss */
+  .jumbotron {
+    padding-top: 0; }
+
+  /* line 80, source/scss/chassis/_responsive.scss */
+  .quickstart .section {
+    padding-top: 0;
+    margin: 0;
+    border: none; } }
+/*
+--------------------------------------------------
+Narrow Screens (300 pixels wide)
+-------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  /* body
+  ----------------------------------------------- */
+  /* line 99, source/scss/chassis/_responsive.scss */
+  body {
+    padding-top: 0; }
+
+  /* topbar
+  ----------------------------------------------- */
+  /* line 106, source/scss/chassis/_responsive.scss */
+  .topbar .nav > li {
+    float: left;
+    width: 25%;
+    margin: 0; }
+
+  /* masthead
+  ----------------------------------------------- */
+  /* line 115, source/scss/chassis/_responsive.scss */
+  .jumbotron {
+    padding-top: 0; }
+
+  /* line 118, source/scss/chassis/_responsive.scss */
+  .jumbotron h1 {
+    font-size: 2.5em; }
+
+  /* quickstart
+  ----------------------------------------------- */
+  /* line 126, source/scss/chassis/_responsive.scss */
+  .quickstart h6,
+  .quickstart p {
+    text-align: left; }
+
+  /* line 129, source/scss/chassis/_responsive.scss */
+  .quickstart .content {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  /* line 133, source/scss/chassis/_responsive.scss */
+  .quickstart .section {
+    padding-bottom: 15px;
+    border: none; }
+
+  /* headings
+  ----------------------------------------------- */
+  /* line 141, source/scss/chassis/_responsive.scss */
+  h1 small {
+    display: block;
+    margin-top: .3em;
+    line-height: 1.25em; }
+
+  /* tabs
+  ----------------------------------------------- */
+  /* line 150, source/scss/chassis/_responsive.scss */
+  .tabs {
+    float: none; }
+
+  /* pagination
+  ----------------------------------------------- */
+  /* line 157, source/scss/chassis/_responsive.scss */
+  .pagination {
+    height: auto; }
+
+  /* line 160, source/scss/chassis/_responsive.scss */
+  .pagination ul {
+    float: none; }
+
+  /* clearing
+  ----------------------------------------------- */
+  /* line 168, source/scss/chassis/_responsive.scss */
+  .tabs,
+  .pagination ul {
+    zoom: 1;
+    display: block; }
+
+  /* line 173, source/scss/chassis/_responsive.scss */
+  .tabs:after,
+  .pagination ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+  /* footer
+  ----------------------------------------------- */
+  /* line 184, source/scss/chassis/_responsive.scss */
+  .footer .pull-right {
+    float: none;
+    text-align: right; } }
+/* 
+Source: Hardboiled CSS3 Media Queries by Andy Clarke:
+http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */ }
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+  /* Styles */ }
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+  /* Styles */ }
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */ }
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */ }
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */ }
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+  /* Styles */ }
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+  /* Styles */ }
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */ }
+/* line 1, source/scss/chassis/_utilities.scss */
+.debug {
+  border: 1px solid #f00;
+  margin: -1px;
+  position: relative;
+  z-index: 100; }
+
+/* line 8, source/scss/chassis/_utilities.scss */
+.center {
+  text-align: center; }
+
+/* Your styles go below here */
+/* line 14, source/scss/style.scss */
+.wrap-toggle {
+  position: fixed;
+  top: 0px;
+  right: 10px;
+  margin: 0;
+  padding: 0; }
+  /* line 20, source/scss/style.scss */
+  .wrap-toggle a.btn {
+    padding: 0.3125em 0.375em 0.375em;
+    margin: 0;
+    line-height: 0px; }
+    /* line 24, source/scss/style.scss */
+    .wrap-toggle a.btn span {
+      display: inline-block;
+      width: 16px;
+      height: 17px;
+      background: url(../images/wraptoggle.png) top left no-repeat;
+      text-indent: -9999em; }
+      /* line 30, source/scss/style.scss */
+      .wrap-toggle a.btn span.fullscreen {
+        background-position: 0px -17px; }

@@ -1,0 +1,69 @@
+/*
+-----------------------------------------------
+Grids: Sections CSS - Display
+----------------------------------------------- */
+/* colors
+-----------------------------------------------
+This section has been commented out to display
+colors only on hover. Uncomment this section
+and comment out the next section to display
+colors by default and black on hover.
+----------------------------------------------- */
+/* line 13, source/scss/chassis/_display-grids.scss */
+.display-grids .content p {
+  background: #f7941d;
+  color: #fff; }
+
+/* line 17, source/scss/chassis/_display-grids.scss */
+.display-grids .half p {
+  background: #8dc63f; }
+
+/* line 20, source/scss/chassis/_display-grids.scss */
+.display-grids .c1 p {
+  background: #00aef0; }
+
+/* line 23, source/scss/chassis/_display-grids.scss */
+.display-grids .c2 p {
+  background: #92278f; }
+
+/* line 26, source/scss/chassis/_display-grids.scss */
+.display-grids .c3 p {
+  background: #ec008c; }
+
+/* line 29, source/scss/chassis/_display-grids.scss */
+.display-grids .c4 p {
+  background: #f00; }
+
+/* hover colors
+----------------------------------------------- */
+/* line 37, source/scss/chassis/_display-grids.scss */
+.display-grids .content:hover,
+.display-grids .subsection:hover {
+  background: #eee; }
+
+/* line 41, source/scss/chassis/_display-grids.scss */
+.display-grids .content:hover p,
+.display-grids .subsection:hover p {
+  background: #000; }
+
+/* spacing
+----------------------------------------------- */
+/* line 48, source/scss/chassis/_display-grids.scss */
+.display-grids .content p {
+  padding: 10px 14px;
+  margin: 0; }
+
+/* effects (rounded corners)
+----------------------------------------------- */
+/* line 57, source/scss/chassis/_display-grids.scss */
+.display-grids .content,
+.display-grids .subsection {
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px; }
+
+/* line 62, source/scss/chassis/_display-grids.scss */
+.display-grids .content p {
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px; }

@@ -1,0 +1,171 @@
+/*
+-----------------------------------------------
+Responsive CSS
+-----------------------------------------------
+Site Name
+file:       css/responsive.css
+author:     Stephen Bau
+date:       21 September 2011
+----------------------------------------------- */
+/* fluid images
+----------------------------------------------- */
+/* line 13, source/scss/chassis/_responsive.scss */
+img {
+  max-width: 100%; }
+
+/*
+--------------------------------------------------
+Large and Medium Screens (above 750 pixels wide)
+-------------------------------------------------- */
+@media only screen and (min-width: 750px) {
+  /* line 24, source/scss/chassis/_responsive.scss */
+  .masthead h1 br {
+    display: none; } }
+@media only screen and (min-width: 960px) {
+  /* line 32, source/scss/chassis/_responsive.scss */
+  .clingwrap {
+    padding: 2em inherit; } }
+/*
+--------------------------------------------------
+Medium Screens (below 960 pixels wide)
+-------------------------------------------------- */
+@media only screen and (max-width: 960px) {
+  /* line 46, source/scss/chassis/_responsive.scss */
+  .masthead .lead br {
+    display: none; }
+
+  /* topbar navigation
+  ----------------------------------------------- */
+  /* line 52, source/scss/chassis/_responsive.scss */
+  .topbar {
+    height: auto;
+    position: static; }
+
+  /* line 56, source/scss/chassis/_responsive.scss */
+  .topbar .container {
+    width: auto; }
+
+  /* line 59, source/scss/chassis/_responsive.scss */
+  .topbar .brand {
+    float: left;
+    width: 94%;
+    padding-left: 3%;
+    padding-right: 3%;
+    background: #000; }
+
+  /* line 66, source/scss/chassis/_responsive.scss */
+  .topbar div > ul {
+    margin: 0; }
+
+  /* line 69, source/scss/chassis/_responsive.scss */
+  .topbar .nav {
+    float: none; }
+
+  /* line 72, source/scss/chassis/_responsive.scss */
+  .topbar .nav > li {
+    float: left;
+    width: 16.6666666%;
+    margin: 0; }
+
+  /* line 77, source/scss/chassis/_responsive.scss */
+  .jumbotron {
+    padding-top: 0; }
+
+  /* line 80, source/scss/chassis/_responsive.scss */
+  .quickstart .section {
+    padding-top: 0;
+    margin: 0;
+    border: none; } }
+/*
+--------------------------------------------------
+Narrow Screens (300 pixels wide)
+-------------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  /* body
+  ----------------------------------------------- */
+  /* line 99, source/scss/chassis/_responsive.scss */
+  body {
+    padding-top: 0; }
+
+  /* topbar
+  ----------------------------------------------- */
+  /* line 106, source/scss/chassis/_responsive.scss */
+  .topbar .nav > li {
+    float: left;
+    width: 25%;
+    margin: 0; }
+
+  /* masthead
+  ----------------------------------------------- */
+  /* line 115, source/scss/chassis/_responsive.scss */
+  .jumbotron {
+    padding-top: 0; }
+
+  /* line 118, source/scss/chassis/_responsive.scss */
+  .jumbotron h1 {
+    font-size: 2.5em; }
+
+  /* quickstart
+  ----------------------------------------------- */
+  /* line 126, source/scss/chassis/_responsive.scss */
+  .quickstart h6,
+  .quickstart p {
+    text-align: left; }
+
+  /* line 129, source/scss/chassis/_responsive.scss */
+  .quickstart .content {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  /* line 133, source/scss/chassis/_responsive.scss */
+  .quickstart .section {
+    padding-bottom: 15px;
+    border: none; }
+
+  /* headings
+  ----------------------------------------------- */
+  /* line 141, source/scss/chassis/_responsive.scss */
+  h1 small {
+    display: block;
+    margin-top: .3em;
+    line-height: 1.25em; }
+
+  /* tabs
+  ----------------------------------------------- */
+  /* line 150, source/scss/chassis/_responsive.scss */
+  .tabs {
+    float: none; }
+
+  /* pagination
+  ----------------------------------------------- */
+  /* line 157, source/scss/chassis/_responsive.scss */
+  .pagination {
+    height: auto; }
+
+  /* line 160, source/scss/chassis/_responsive.scss */
+  .pagination ul {
+    float: none; }
+
+  /* clearing
+  ----------------------------------------------- */
+  /* line 168, source/scss/chassis/_responsive.scss */
+  .tabs,
+  .pagination ul {
+    zoom: 1;
+    display: block; }
+
+  /* line 173, source/scss/chassis/_responsive.scss */
+  .tabs:after,
+  .pagination ul:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+  /* footer
+  ----------------------------------------------- */
+  /* line 184, source/scss/chassis/_responsive.scss */
+  .footer .pull-right {
+    float: none;
+    text-align: right; } }

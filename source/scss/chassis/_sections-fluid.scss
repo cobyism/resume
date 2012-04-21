@@ -1,0 +1,74 @@
+@media screen
+and (min-width: 601px)
+and (max-width: 960px) {
+/*
+-----------------------------------------------
+Sections Grid CSS - Fluid
+-----------------------------------------------
+Site Name
+file:		css/text.css
+author:		Stephen Bau
+date:		2 July 2010
+-----------------------------------------------
+A grid system by Craig Zheng designed
+for publicculture.org and symphony-cms.com.
+Adapted by Stephen Bau.
+----------------------------------------------- */
+
+.clingwrap .page, .container {
+	width: auto;
+}
+.section {
+	overflow: hidden;
+	clear: both;
+}
+.subsection {
+	float: left;
+	width: 25%;
+}
+
+/* 3-column grid */
+.thirds .subsection,
+.thirds .c1 {
+	width: 33.3333%;
+}
+.thirds .half {
+	width: 16.6666%;
+}
+.thirds .c2 {
+	width: 66.6666%;
+}
+
+/* 4-column grid (default) */
+.half {
+	width: 12.5%;
+}
+.c1 {
+	width: 25%;
+}
+.c2 {
+	width: 50%;
+}
+.c3 {
+	width: 75%;
+}
+
+/* 5-column grid */
+.fifths .subsection,
+.fifths .c1 {
+	width: 20%;
+}
+.fifths .half {
+	width: 10%;
+}
+.fifths .c2 {
+	width: 40%;
+}
+.fifths .c3 {
+	width: 60%;
+}
+.fifths .c4 {
+	width: 80%;
+}
+
+}

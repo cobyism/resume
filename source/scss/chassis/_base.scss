@@ -1,0 +1,54 @@
+html,
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: $unit;
+	font-weight: 300;
+	color: $dark_primary;
+	background: #ddd;
+}
+
+.page {
+	background: #fff;
+	@include box-shadow(0px 0.125em 0.425em $dark_primary);
+}
+
+a {
+	color: $hl_blue;
+	text-decoration: none;
+}
+
+p a {
+	color: darken($dark_primary, 5%);
+	border-bottom: 2px solid $hl_primary;
+}
+
+h1 { margin-bottom: 0.75em; font-size: 2.8em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.8em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	line-height: 1.25em;
+	a {
+		font-weight: inherit;
+	}
+}
+
+.content {
+	padding: 1em;
+}
+
+
+hr {
+	height: 1px;
+	background: #ccc;
+	border: none;
+	margin-bottom: 1em;
+}
+
+.texture-example {
+	height: 100px;
+	border: 2px solid #fff;
+}

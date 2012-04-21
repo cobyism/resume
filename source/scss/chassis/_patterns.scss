@@ -1,0 +1,251 @@
+// Horizontal nav menu
+@mixin nav() {
+	@include clearfix;
+	.item, .item a {
+		float: left;
+		margin: 0;
+	}
+}
+.nav { @include nav; }
+
+.nav-bar {
+	@include nav;
+	padding: 0.5em;
+	@include gradientBar(lighten($dark_primary, 10%), darken($dark_primary, 5%));
+	color: $light_primary;
+	.item {
+		margin-right: 0.5em;
+		a {
+			@include border-radius(0.1875em);
+			color: $light_primary;
+			padding: 0.5em 0.675em;
+			&:hover {
+				color: $hl_primary;
+				background: darken($dark_primary, 5%);
+			}
+		}
+	}
+	.active {
+		a, a:hover {
+			@include gradientBar(lighten($hl_primary, 10%), darken($hl_primary, 10%));
+			text-shadow: 0px 1px 0px lighten($hl_primary, 30%);
+			color: $dark_primary;
+		}
+	}
+}
+.content {
+	.nav-bar {
+		@include border-radius(0.1875em);
+	}
+}
+.nav-chassis {
+	@include nav;
+	@include vertical-gradient(darken($dark_primary, 5%), lighten($dark_primary, 10%));
+	text-shadow: 0px 1px 2px #000;
+	color: $light_primary;
+	.item {
+		a {
+			color: $light_primary;
+			padding: 0.75em 1em;
+			font-weight: bold;
+			&:hover {
+				color: $hl_primary;
+				//@include vertical-gradient(lighten($dark_primary, 20%), darken($dark_primary, 10%));
+			}
+		}
+	}
+	.active {
+		a, a:hover {
+			@include gradientBar(lighten($hl_primary, 10%), darken($hl_primary, 10%));
+			text-shadow: 0px 1px 0px lighten($hl_primary, 30%);
+			color: $dark_primary;
+		}
+	}
+}
+.nav-line-top {
+	@include nav;
+	background: $dark_primary;
+	color: darken($light_primary, 20%);
+	.item {
+		margin-right: 0.5em;
+		a {
+			border-top: 2px solid $dark_primary;
+			color: darken($light_primary, 20%);
+			padding: 0.5em 0.675em;
+			&:hover {
+				background: lighten($dark_primary, 10%);
+				border-top: 2px solid lighten($dark_primary, 10%);
+			}
+		}
+	}
+	.active {
+		a, a:hover {
+			border-top: 2px solid $hl_red;
+			color: $light_primary;
+			font-weight: bold;
+		}
+	}
+}
+.nav-line-bottom {
+	@include nav;
+	background: $dark_primary;
+	color: darken($light_primary, 20%);
+	.item {
+		margin-right: 0.5em;
+		a {
+			border-bottom: 2px solid $dark_primary;
+			color: darken($light_primary, 20%);
+			padding: 0.5em 0.675em;
+			&:hover {
+				background: lighten($dark_primary, 10%);
+				border-bottom: 2px solid lighten($dark_primary, 10%);
+			}
+		}
+	}
+	.active {
+		a, a:hover {
+			border-bottom: 2px solid $hl_red;
+			color: $light_primary;
+			font-weight: bold;
+		}
+	}
+}
+
+
+.nav-pills {
+	@include nav;
+	.item {
+		a {
+			@include border-radius(0.1875em);
+			color: $hl_primary;
+			padding: 0.5em 0.8em;
+			&:hover {
+				color: lighten($hl_primary, 10%);
+			}
+		}
+	}
+	.active {
+		a, a:hover {
+			background: $hl_primary;
+			color: $light_primary;
+		}
+	}
+}
+
+.nav-tabs {
+	@include nav;
+	.item {
+		border-bottom: 1px solid $hl_primary;
+		a {
+			color: $hl_primary;
+			padding: 0.5em 0.8em;
+			&:hover {
+				color: lighten($hl_primary, 10%);
+			}
+		}
+	}
+	.active {
+		a, a:hover {
+			color: $dark_primary;
+		}
+		border: 1px solid $hl_primary;
+		border-bottom: none;
+		@include border-radius(0.1875em 0.1875em 0 0);
+	}
+}
+
+.nav-bar, .nav-line-top, .nav-line-bottom, .nav-pills, .nav-tabs, .nav-chassis {
+	.container ul {
+		padding: 0 1em;
+	}
+}
+.clingwrap {
+	.nav-bar, .nav-line-top, .nav-line-bottom, .nav-pills, .nav-tabs, .nav-chassis {
+		.container ul {
+			padding: 0 1em;
+		}
+	}
+}
+
+.hero-unit {
+	font-size: 1.5em;
+	background: $light_primary;
+	@include box-shadow(inset 0px 0px 2em $dark_primary);
+	h1, h2 {
+		font-size: 2.2em;
+		line-height: 0.8em;
+	}
+	p {
+		margin-bottom: 0.5em;
+	}
+}
+
+.btn {
+	// Button Base
+	cursor: pointer;
+	display: inline-block;
+	@include vertical-three-colors-gradient(#fff, #fff, 25%, darken(#fff, 10%));
+	text-shadow: 0 1px 1px rgba(255,255,255,.75);
+	padding: 0.425em 0.75em;
+	color: #333;
+	line-height: normal;
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	@include border-radius(0.1875em);
+	$shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+	@include box-shadow($shadow);
+
+	&:hover {
+		background-position: 0 -1em;
+		color: #333;
+		text-decoration: none;
+	}
+
+	// Focus state for keyboard and accessibility
+	&:focus {
+		outline: 1px dotted #666;
+	}
+
+	// Primary Button Type
+	&.primary {
+		color: white;
+		@include gradientBar($hl_primary, darken($hl_primary, 20%));
+		border: 1px solid darken($hl_primary, 20%);
+	}
+
+	 // Transitions
+	@include transition(.1s linear all);
+
+	// Active and Disabled states
+	&.active,
+	&:active {
+		$shadow: inset 0 2px 4px rgba(0,0,0,.25), 0 1px 2px rgba(0,0,0,.05);
+		@include box-shadow($shadow);
+	}
+	&.disabled {
+		cursor: default;
+		background-image: none;
+		@include reset-filter();
+		@include opacity(65);
+		@include box-shadow(none);
+	}
+	&[disabled] {
+		// disabled pseudo can't be included with .disabled
+		// def because IE8 and below will drop it ;_;
+		cursor: default;
+		background-image: none;
+		@include reset-filter();
+		@include opacity(65);
+		@include box-shadow(none);
+	}
+
+	// Button Sizes
+	&.large {
+		font-size: 1.2em;
+		line-height: normal;
+		@include border-radius(0.5em);
+	}
+	&.small {
+		font-size: 0.8em;
+	}
+}

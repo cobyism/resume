@@ -1,0 +1,10 @@
+/* line 1, source/scss/chassis/_utilities.scss */
+.debug {
+  border: 1px solid #f00;
+  margin: -1px;
+  position: relative;
+  z-index: 100; }
+
+/* line 8, source/scss/chassis/_utilities.scss */
+.center {
+  text-align: center; }

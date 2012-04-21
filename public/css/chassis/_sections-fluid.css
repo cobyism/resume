@@ -1,0 +1,82 @@
+@media screen
+and (min-width: 601px)
+and (max-width: 960px) {
+  /*
+  -----------------------------------------------
+  Sections Grid CSS - Fluid
+  -----------------------------------------------
+  Site Name
+  file:		css/text.css
+  author:		Stephen Bau
+  date:		2 July 2010
+  -----------------------------------------------
+  A grid system by Craig Zheng designed
+  for publicculture.org and symphony-cms.com.
+  Adapted by Stephen Bau.
+  ----------------------------------------------- */
+  /* line 18, source/scss/chassis/_sections-fluid.scss */
+  .clingwrap .page, .container {
+    width: auto; }
+
+  /* line 21, source/scss/chassis/_sections-fluid.scss */
+  .section {
+    overflow: hidden;
+    clear: both; }
+
+  /* line 25, source/scss/chassis/_sections-fluid.scss */
+  .subsection {
+    float: left;
+    width: 25%; }
+
+  /* 3-column grid */
+  /* line 32, source/scss/chassis/_sections-fluid.scss */
+  .thirds .subsection,
+  .thirds .c1 {
+    width: 33.3333%; }
+
+  /* line 35, source/scss/chassis/_sections-fluid.scss */
+  .thirds .half {
+    width: 16.6666%; }
+
+  /* line 38, source/scss/chassis/_sections-fluid.scss */
+  .thirds .c2 {
+    width: 66.6666%; }
+
+  /* 4-column grid (default) */
+  /* line 43, source/scss/chassis/_sections-fluid.scss */
+  .half {
+    width: 12.5%; }
+
+  /* line 46, source/scss/chassis/_sections-fluid.scss */
+  .c1 {
+    width: 25%; }
+
+  /* line 49, source/scss/chassis/_sections-fluid.scss */
+  .c2 {
+    width: 50%; }
+
+  /* line 52, source/scss/chassis/_sections-fluid.scss */
+  .c3 {
+    width: 75%; }
+
+  /* 5-column grid */
+  /* line 58, source/scss/chassis/_sections-fluid.scss */
+  .fifths .subsection,
+  .fifths .c1 {
+    width: 20%; }
+
+  /* line 61, source/scss/chassis/_sections-fluid.scss */
+  .fifths .half {
+    width: 10%; }
+
+  /* line 64, source/scss/chassis/_sections-fluid.scss */
+  .fifths .c2 {
+    width: 40%; }
+
+  /* line 67, source/scss/chassis/_sections-fluid.scss */
+  .fifths .c3 {
+    width: 60%; }
+
+  /* line 70, source/scss/chassis/_sections-fluid.scss */
+  .fifths .c4 {
+    width: 80%; } }

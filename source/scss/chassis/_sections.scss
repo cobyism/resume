@@ -1,0 +1,105 @@
+@media screen
+and (min-width: 601px) {
+/*
+-----------------------------------------------
+Sections Grid CSS
+-----------------------------------------------
+Site Name
+file:       css/sections.css
+author:     Stephen Bau
+date:       2 July 2010
+-----------------------------------------------
+A grid system by Craig Zheng designed
+for publicculture.org and symphony-cms.com.
+Adapted by Stephen Bau.
+-----------------------------------------------
+
+1) class="section" basically designates a 'row', within which any
+number of class="subsection" elements represent 'columns'
+2) The 'column' widths are specified with another class: either
+"fragment" "simple" "compound" or "complex" (semantic nomenclature I
+borrowed right from English grammar).
+
+So we end up with something like this:
+
+	<div class="section">
+		<div class="subsection simple">
+		</div>
+		<div class="subsection compound">
+		</div>
+		<div class="subsection simple">
+		</div>
+	</div>
+
+Which gives you a half-width column in the middle with two
+quarter-width columns on either side. Of course, you could dispense
+with the DIVs if you don't need them and just apply those classes to
+any other block-level elements. The CSS looks like this:
+
+*/
+
+.clingwrap .page, .container {
+	width: $site_width;
+	margin: 0 auto;
+}
+.section:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.section {
+  zoom: 1;
+  display: block;
+}
+.subsection {
+	float: left;
+	width: 0.25 * $site_width;
+}
+
+/* 3-column grid */
+.thirds .subsection,
+.thirds .c1 {
+	width: 0.333333333 * $site_width;
+}
+.thirds .half {
+	width: 0.166666667 * $site_width;
+}
+.thirds .c2 {
+	width: 0.666666667 * $site_width;
+}
+
+/* 4-column grid (default) */
+.half {
+	width: 0.125 * $site_width;
+}
+.c1 {
+	width: 0.25 * $site_width;
+}
+.c2 {
+	width: 0.5 * $site_width;
+}
+.c3 {
+	width: 0.75 * $site_width;
+}
+
+/* 5-column grid */
+.fifths .subsection,
+.fifths .c1 {
+	width: 0.2 * $site_width;
+}
+.fifths .half {
+	width: 0.1 * $site_width;
+}
+.fifths .c2 {
+	width: 0.4 * $site_width;
+}
+.fifths .c3 {
+	width: 0.6 * $site_width;
+}
+.fifths .c4 {
+	width: 0.8 * $site_width;
+}
+
+}

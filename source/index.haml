@@ -1,0 +1,454 @@
+!!! 5
+/[if lt IE 7] <html class="no-js ie6 oldie" lang="en">
+/[if IE 7] <html class="no-js ie7 oldie" lang="en">
+/[if IE 8] <html class="no-js ie8 oldie" lang="en">
+/[if gt IE 8]><!
+%html.no-js{:lang => "en"}
+	/ <![endif]
+	%head
+		%meta{:charset => "utf-8"}/
+		%meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+		%title Chassis
+		%meta{:content => "", :name => "description"}/
+		%meta{:content => "", :name => "author"}/
+		%meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+		%link{:rel => "stylesheet", :href => "css/style.css"}
+		%script{:src => "js/libs/modernizr-2.0.6.min.js"}
+	%body.clingwrap.texture-wood
+		.page
+			.section.hero-unit.texture-graph
+				.wrap-toggle
+					%a.btn.primary.small{ :href => "#" }
+						%span Toggle Page Wrap
+				.container
+					.content
+						.center
+							%h1 Introducing Chassis
+							%p A simple, responsive HTML and CSS framework using HAML and Sass.
+							.buttons
+								%a.btn.primary Download Chassis
+								%a.btn Fork on GitHub
+			.section.nav-chassis
+				.container
+					%ul
+						%li.item.active
+							%a{:href => "#"} Home
+						%li.item
+							%a{:href => "#"} Typography
+						%li.item
+							%a{:href => "#"} Grid
+						%li.item
+							%a{:href => "#"} Patterns
+						%li.item
+							%a{:href => "#"} Tables
+						%li.item
+							%a{:href => "#"} Forms
+						%li.item
+							%a{:href => "#"} Sass
+			.section.type.fifths
+				.container
+					.subsection.c3
+						.content
+							%h1 Heading 1
+							%hr/
+							%p They began to meet more people. For the most part these were staring before them, murmuring indistinct questions, jaded, haggard, unclean. One man in evening dress passed them on foot, his eyes on the ground. They heard his voice, and, looking back at him, saw one hand clutched in his hair and the other beating invisible things. His paroxysm of rage over, he went on his way without once looking back.
+							%p As my brother's party went on towards the crossroads to the south of Barnet they saw a woman approaching the road across some fields on their left, carrying a child and with two other children; and then passed a man in dirty black, with a thick stick in one hand and a small portmanteau in the other. Then round the corner of the lane, from between the villas that guarded it at its confluence with the high road, came a little cart drawn by a sweating black pony and driven by a sallow youth in a bowler hat, grey with dust. There were three girls, East End factory girls, and a couple of little children crowded in the cart.
+					.subsection.c2
+						.content
+							%h2 Heading 2
+							%p Paragraphs are awesome.
+							%h3 Heading 3
+							%p Paragraphs are awesome.
+							%h4 Heading 4
+							%p Paragraphs are awesome.
+							%h5 Heading 5
+							%p Paragraphs are awesome.
+							%h6 Heading 6
+							%p Paragraphs are awesome.
+			.section.textures
+				.container
+					.section.fifths
+						.subsection.c1
+							.content
+								.texture-example.texture-wood &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-linen &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-roughcloth &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-graph &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-ricepaper &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-diagmonds &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-zigzag &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-dotnoise &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-woven &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-carbonfibre &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-linedpaper &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-crosses &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-blacklinen &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-brightsquares &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-grungewall &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-hanky &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-largemosaic &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-doublelined &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-pinstripe &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-leather &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-dotgrill &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-dotgrillbig &nbsp;
+						.subsection.c1
+							.content
+								.texture-example.texture-microcarbon &nbsp;
+							
+			.sections.display-grids
+				.container
+					.content
+						%h2.h2 5-Column Grid
+					.section
+						.content
+							%p .content
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c4
+							.content
+								%p .c4
+							.subsection.half
+								.content
+									%p Test
+							.subsection.c2
+								.content
+									%p Test
+							.subsection.c1
+								.content
+									%p Test
+					.section.fifths
+						.subsection.c4
+							.content
+								%p .c4
+						.subsection.c1
+							.content
+								%p .c1
+					.section.fifths
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c3
+							.content
+								%p .c3
+					.section.fifths
+						.subsection.c3
+							.content
+								%p .c3
+						.subsection.c2
+							.content
+								%p .c2
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c3
+							.content
+								%p .c3
+						.subsection.c1
+							.content
+								%p .c1
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c3
+							.content
+								%p .c3
+					.section.fifths
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c1
+							.content
+								%p .c1
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c1
+							.content
+								%p .c1
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c2
+							.content
+								%p .c2
+					.section.fifths
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+					.section.fifths
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+					.content
+						%h2 4-Column Grid
+					.section
+						.content
+							%p .content
+					.section
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c3
+							.content
+								%p .c3
+					.section
+						.subsection.c3
+							.content
+								%p .c3
+						.subsection.c1
+							.content
+								%p .c1
+					.section
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c2
+							.content
+								%p .c2
+					.section
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c1
+							.content
+								%p .c1
+					.section
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+					.section
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c2
+							.content
+								%p .c2
+					.section
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+					.section
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+					.content
+						%h2 3-Column Grid
+					.section.thirds
+						.content
+							%p .content
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c2
+							.content
+								%p .c2
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.c1
+							.content
+								%p .c1
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+						.subsection.half
+							.content
+								%p .half
+			.section
+				.container
+					.content
+						%p &copy; Copyright 2011 Coby Chapple.
+						%p Licensed under the <a href=" http://www.apache.org/licenses/LICENSE-2.0" title="Apache License Version 2.0">Apache License, Version 2.0</a>.
+		%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
+		%script{:src => "js/libs/jquery-1.6.2.min.js"}
+		:javascript
+			window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')		/ scripts concatenated and minified via ant build script
+		%script{:defer => "", :src => "js/plugins.js"}
+		%script{:defer => "", :src => "js/script.js"}
+		:javascript
+			window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+			Modernizr.load({
+				load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+			});

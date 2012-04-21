@@ -1,0 +1,35 @@
+/*!
+ * Chassis v0.5
+ *
+ * Copyright 2011 Coby Chapple
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
+
+// Reset
+@import "chassis/main";
+
+/* Your styles go below here */
+
+.wrap-toggle {
+	position: fixed;
+	top: 0px;
+	right: 10px;
+	margin: 0;
+	padding: 0;
+	a.btn {
+		padding: 0.3125em 0.375em 0.375em;
+		margin: 0;
+		line-height: 0px;
+		span {
+			display: inline-block;
+			width: 16px;
+			height: 17px;
+			background: url(../images/wraptoggle.png) top left no-repeat;
+			text-indent: -9999em;
+			&.fullscreen{
+				background-position: 0px -17px;
+			}
+		}
+	}
+}
