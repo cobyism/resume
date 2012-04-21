@@ -517,31 +517,18 @@ hr {
 .hero-unit {
   font-size: 1.5em;
   background: #f5f5f5;
-  /*@include box-shadow(inset 0px 0px 2em $dark_primary);*/
-  /*background: $color1; [> Old browsers <]*/
-  background: -moz-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #555555));
-  /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
-  /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, white 0%, #555555 100%);
-  /* IE10+ */
-  background: radial-gradient(center, ellipse cover, white 0%, #555555 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */ }
-  /* line 175, source/scss/chassis/_patterns.scss */
+  -webkit-box-shadow: inset 0px 0px 2em #333333;
+  -moz-box-shadow: inset 0px 0px 2em #333333;
+  box-shadow: inset 0px 0px 2em #333333; }
+  /* line 174, source/scss/chassis/_patterns.scss */
   .hero-unit h1, .hero-unit h2 {
     font-size: 2.2em;
     line-height: 0.8em; }
-  /* line 179, source/scss/chassis/_patterns.scss */
+  /* line 178, source/scss/chassis/_patterns.scss */
   .hero-unit p {
     margin-bottom: 0.5em; }
 
-/* line 184, source/scss/chassis/_patterns.scss */
+/* line 183, source/scss/chassis/_patterns.scss */
 .btn {
   cursor: pointer;
   display: inline-block;
@@ -571,15 +558,15 @@ hr {
   -ms-transition: 0.1s linear all;
   -o-transition: 0.1s linear all;
   transition: 0.1s linear all; }
-  /* line 199, source/scss/chassis/_patterns.scss */
+  /* line 198, source/scss/chassis/_patterns.scss */
   .btn:hover {
     background-position: 0 -1em;
     color: #333;
     text-decoration: none; }
-  /* line 206, source/scss/chassis/_patterns.scss */
+  /* line 205, source/scss/chassis/_patterns.scss */
   .btn:focus {
     outline: 1px dotted #666; }
-  /* line 211, source/scss/chassis/_patterns.scss */
+  /* line 210, source/scss/chassis/_patterns.scss */
   .btn.primary {
     color: white;
     background-color: #660000;
@@ -596,12 +583,12 @@ hr {
     border-color: #660000 #660000 #1a0000;
     border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
     border: 1px solid #660000; }
-  /* line 222, source/scss/chassis/_patterns.scss */
+  /* line 221, source/scss/chassis/_patterns.scss */
   .btn.active, .btn:active {
     -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05); }
-  /* line 226, source/scss/chassis/_patterns.scss */
+  /* line 225, source/scss/chassis/_patterns.scss */
   .btn.disabled {
     cursor: default;
     background-image: none;
@@ -613,7 +600,7 @@ hr {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-  /* line 233, source/scss/chassis/_patterns.scss */
+  /* line 232, source/scss/chassis/_patterns.scss */
   .btn[disabled] {
     cursor: default;
     background-image: none;
@@ -625,14 +612,14 @@ hr {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none; }
-  /* line 244, source/scss/chassis/_patterns.scss */
+  /* line 243, source/scss/chassis/_patterns.scss */
   .btn.large {
     font-size: 1.2em;
     line-height: normal;
     -webkit-border-radius: 0.5em;
     -moz-border-radius: 0.5em;
     border-radius: 0.5em; }
-  /* line 249, source/scss/chassis/_patterns.scss */
+  /* line 248, source/scss/chassis/_patterns.scss */
   .btn.small {
     font-size: 0.8em; }
 
@@ -1374,24 +1361,315 @@ http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
 
 /* Your styles go below here */
 /* line 14, source/scss/style.scss */
-.wrap-toggle {
-  position: fixed;
-  top: 0px;
-  right: 10px;
-  margin: 0;
-  padding: 0; }
-  /* line 20, source/scss/style.scss */
-  .wrap-toggle a.btn {
-    padding: 0.3125em 0.375em 0.375em;
-    margin: 0;
-    line-height: 0px; }
-    /* line 24, source/scss/style.scss */
-    .wrap-toggle a.btn span {
+html, body {
+  font-family: Lato, Helvetica, Arial, sans-serif; }
+
+/* line 18, source/scss/style.scss */
+.topline {
+  float: left;
+  width: 100%;
+  height: 6px;
+  background: url(../images/topline.png) repeat-x;
+  position: absolute;
+  top: 0;
+  -webkit-box-shadow: 0px 1px 3px #777777;
+  -moz-box-shadow: 0px 1px 3px #777777;
+  box-shadow: 0px 1px 3px #777777; }
+
+/* line 28, source/scss/style.scss */
+header {
+  padding: 20px 0px; }
+
+/* line 32, source/scss/style.scss */
+header h1 {
+  background: url(../images/coby-chapple.png) 0 50% no-repeat;
+  padding: 30px 0px 30px 120px;
+  display: inline-block;
+  font-weight: 800;
+  text-shadow: 0px 1px 0px #fff;
+  margin-bottom: 0px; }
+
+/* line 41, source/scss/style.scss */
+header .buttons {
+  float: right;
+  margin-top: 45px; }
+  /* line 44, source/scss/style.scss */
+  header .buttons a {
+    margin-left: 10px;
+    padding: 5px 5px 9px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff; }
+    /* line 49, source/scss/style.scss */
+    header .buttons a.twitter {
+      background: #0092e8;
+      -webkit-box-shadow: inset 0px -3px 0px #0055b5, inset 0px 1px 0px #3cffff;
+      -moz-box-shadow: inset 0px -3px 0px #0055b5, inset 0px 1px 0px #3cffff;
+      box-shadow: inset 0px -3px 0px #0055b5, inset 0px 1px 0px #3cffff;
+      background-color: #0085e4;
+      background-repeat: repeat-x;
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#00cbf5), to(#0085e4));
+      background-image: -moz-linear-gradient(top, #00cbf5, #0085e4);
+      background-image: -ms-linear-gradient(top, #00cbf5, #0085e4);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00cbf5), color-stop(100%, #0085e4));
+      background-image: -webkit-linear-gradient(top, #00cbf5, #0085e4);
+      background-image: -o-linear-gradient(top, #00cbf5, #0085e4);
+      background-image: linear-gradient(top, #00cbf5, #0085e4);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00cbf5', endColorstr='#0085e4', GradientType=0);
+      text-shadow: 0px 1px 0px #0055b5;
+      border: 1px solid #003a4c; }
+      /* line 55, source/scss/style.scss */
+      header .buttons a.twitter span {
+        background: url(../images/button-sprite.png) 5px 6px no-repeat;
+        padding-left: 36px; }
+    /* line 60, source/scss/style.scss */
+    header .buttons a.email {
+      background: #1da522;
+      -webkit-box-shadow: inset 0px -3px 0px #007600, inset 0px 1px 0px #afffb7;
+      -moz-box-shadow: inset 0px -3px 0px #007600, inset 0px 1px 0px #afffb7;
+      box-shadow: inset 0px -3px 0px #007600, inset 0px 1px 0px #afffb7;
+      background-color: #1da522;
+      background-repeat: repeat-x;
+      background-image: -khtml-gradient(linear, left top, left bottom, from(#71da79), to(#1da522));
+      background-image: -moz-linear-gradient(top, #71da79, #1da522);
+      background-image: -ms-linear-gradient(top, #71da79, #1da522);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #71da79), color-stop(100%, #1da522));
+      background-image: -webkit-linear-gradient(top, #71da79, #1da522);
+      background-image: -o-linear-gradient(top, #71da79, #1da522);
+      background-image: linear-gradient(top, #71da79, #1da522);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71da79', endColorstr='#1da522', GradientType=0);
+      border: 1px solid #034306;
+      text-shadow: 0px 1px 0px #007600; }
+      /* line 66, source/scss/style.scss */
+      header .buttons a.email span {
+        background: url(../images/button-sprite.png) 5px -33px no-repeat;
+        padding-left: 36px; }
+    /* line 71, source/scss/style.scss */
+    header .buttons a span {
+      padding: 7px 5px;
       display: inline-block;
-      width: 16px;
-      height: 17px;
-      background: url(../images/wraptoggle.png) top left no-repeat;
-      text-indent: -9999em; }
-      /* line 30, source/scss/style.scss */
-      .wrap-toggle a.btn span.fullscreen {
-        background-position: 0px -17px; }
+      font-weight: bold; }
+
+/* line 79, source/scss/style.scss */
+.clingwrap {
+  padding: 0 inherit 2em; }
+
+/* line 83, source/scss/style.scss */
+.page {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #fffcf0; }
+  /* line 86, source/scss/style.scss */
+  .page .page-title {
+    background-color: #dcd9c8;
+    background-repeat: repeat-x;
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#f6f5f0), to(#dcd9c8));
+    background-image: -moz-linear-gradient(top, #f6f5f0, #dcd9c8);
+    background-image: -ms-linear-gradient(top, #f6f5f0, #dcd9c8);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f5f0), color-stop(100%, #dcd9c8));
+    background-image: -webkit-linear-gradient(top, #f6f5f0, #dcd9c8);
+    background-image: -o-linear-gradient(top, #f6f5f0, #dcd9c8);
+    background-image: linear-gradient(top, #f6f5f0, #dcd9c8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f5f0', endColorstr='#dcd9c8', GradientType=0);
+    -webkit-box-shadow: 0px 1px 0px #b3b1ab;
+    -moz-box-shadow: 0px 1px 0px #b3b1ab;
+    box-shadow: 0px 1px 0px #b3b1ab;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px; }
+    /* line 90, source/scss/style.scss */
+    .page .page-title h2 {
+      font-weight: 800;
+      font-style: italic;
+      font-size: 36px;
+      text-shadow: 0px 1px 0px #fff;
+      margin-left: 10px;
+      color: #353029;
+      padding: 15px; }
+    /* line 100, source/scss/style.scss */
+    .page .page-title .buttons {
+      float: right;
+      margin-top: 8px;
+      padding: 15px; }
+    /* line 105, source/scss/style.scss */
+    .page .page-title a {
+      padding: 5px 5px 9px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      font-size: 13px;
+      color: #353029; }
+      /* line 110, source/scss/style.scss */
+      .page .page-title a.pdf {
+        background: #1da522;
+        -webkit-box-shadow: inset 0px -3px 0px #a09b86, inset 0px 1px 0px white;
+        -moz-box-shadow: inset 0px -3px 0px #a09b86, inset 0px 1px 0px white;
+        box-shadow: inset 0px -3px 0px #a09b86, inset 0px 1px 0px white;
+        background-color: #c3bea9;
+        background-repeat: repeat-x;
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#e8e6dc), to(#c3bea9));
+        background-image: -moz-linear-gradient(top, #e8e6dc, #c3bea9);
+        background-image: -ms-linear-gradient(top, #e8e6dc, #c3bea9);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e8e6dc), color-stop(100%, #c3bea9));
+        background-image: -webkit-linear-gradient(top, #e8e6dc, #c3bea9);
+        background-image: -o-linear-gradient(top, #e8e6dc, #c3bea9);
+        background-image: linear-gradient(top, #e8e6dc, #c3bea9);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e6dc', endColorstr='#c3bea9', GradientType=0);
+        border: 1px solid #7d7a6a;
+        text-shadow: 0px 1px 0px #fff; }
+        /* line 116, source/scss/style.scss */
+        .page .page-title a.pdf span {
+          background: url(../images/button-sprite.png) 5px -74px no-repeat;
+          padding-left: 36px; }
+      /* line 121, source/scss/style.scss */
+      .page .page-title a span {
+        padding: 7px 5px;
+        display: inline-block;
+        font-weight: 800; }
+
+/* line 130, source/scss/style.scss */
+.page .content {
+  color: #746e67;
+  padding: 20px 30px; }
+  /* line 133, source/scss/style.scss */
+  .page .content h3, .page .content h4, .page .content h5, .page .content h6, .page .content strong {
+    color: #57524a;
+    font-weight: 800; }
+  /* line 137, source/scss/style.scss */
+  .page .content h4 {
+    font-size: 16px; }
+
+/* line 142, source/scss/style.scss */
+ul.ticks {
+  padding-left: 30px; }
+  /* line 144, source/scss/style.scss */
+  ul.ticks li {
+    list-style-image: url(../images/tick.png); }
+
+/* line 149, source/scss/style.scss */
+.amp {
+  font-family: Baskerville, "Palatino Linotype", Palatino, serif;
+  font-style: italic;
+  font-weight: normal; }
+
+/* line 156, source/scss/style.scss */
+#overview p {
+  text-align: center;
+  font-size: 30px;
+  line-height: 36px;
+  text-shadow: 0px 1px 0px #fff; }
+
+/* line 163, source/scss/style.scss */
+.page .section-title {
+  background-color: #ffc300;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#ffd500), to(#ffc300));
+  background-image: -moz-linear-gradient(top, #ffd500, #ffc300);
+  background-image: -ms-linear-gradient(top, #ffd500, #ffc300);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffd500), color-stop(100%, #ffc300));
+  background-image: -webkit-linear-gradient(top, #ffd500, #ffc300);
+  background-image: -o-linear-gradient(top, #ffd500, #ffc300);
+  background-image: linear-gradient(top, #ffd500, #ffc300);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd500', endColorstr='#ffc300', GradientType=0);
+  border: 1px solid #ae911f;
+  -webkit-box-shadow: 0px 1px 3px #555555, inset 0px 1px 0px #ffec8b;
+  -moz-box-shadow: 0px 1px 3px #555555, inset 0px 1px 0px #ffec8b;
+  box-shadow: 0px 1px 3px #555555, inset 0px 1px 0px #ffec8b;
+  display: block;
+  float: left;
+  clear: both;
+  position: relative;
+  left: -10px; }
+  /* line 172, source/scss/style.scss */
+  .page .section-title h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #453b15;
+    text-shadow: 0px 1px 0px #ffe999;
+    display: inline-block;
+    padding: 5px 10px 5px 30px;
+    font-weight: 800; }
+  /* line 181, source/scss/style.scss */
+  .page .section-title:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -1px;
+    width: 10px;
+    height: 10px;
+    float: left;
+    background: url(../images/fold.png) top left no-repeat; }
+
+/* line 193, source/scss/style.scss */
+#experience, #education {
+  margin-bottom: 30px; }
+  /* line 196, source/scss/style.scss */
+  #experience .items .item, #education .items .item {
+    padding: 30px 30px 0px;
+    float: left; }
+    /* line 199, source/scss/style.scss */
+    #experience .items .item .summary, #education .items .item .summary {
+      float: left;
+      width: 70%;
+      padding: 20px;
+      background: #fff;
+      color: #746e67;
+      -webkit-box-shadow: 0px 1px 3px #555555;
+      -moz-box-shadow: 0px 1px 3px #555555;
+      box-shadow: 0px 1px 3px #555555;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
+      /* line 207, source/scss/style.scss */
+      #experience .items .item .summary h5, #education .items .item .summary h5 {
+        color: #746e67;
+        font-weight: normal;
+        font-size: 24px;
+        margin-bottom: 12px; }
+        /* line 212, source/scss/style.scss */
+        #experience .items .item .summary h5 strong, #education .items .item .summary h5 strong {
+          color: #453b15;
+          font-weight: 800; }
+        /* line 216, source/scss/style.scss */
+        #experience .items .item .summary h5 a, #education .items .item .summary h5 a {
+          font-size: 11px;
+          text-transform: uppercase;
+          font-weight: 800; }
+      /* line 222, source/scss/style.scss */
+      #experience .items .item .summary .list, #education .items .item .summary .list {
+        float: left;
+        margin-right: 15px;
+        font-size: 13px; }
+    /* line 228, source/scss/style.scss */
+    #experience .items .item .details, #education .items .item .details {
+      float: left; }
+      /* line 230, source/scss/style.scss */
+      #experience .items .item .details .date, #education .items .item .details .date {
+        font-size: 18px;
+        font-weight: 800;
+        font-style: italic;
+        border-bottom: 2px solid #bdbbb3;
+        padding: 10px 0px 10px 15px; }
+      /* line 237, source/scss/style.scss */
+      #experience .items .item .details .location, #education .items .item .details .location {
+        margin: 10px 0px 5px 15px;
+        font-size: 13px;
+        color: #746e67;
+        font-weight: 800;
+        background: url(../images/map-marker.png) 0px 50% no-repeat;
+        padding-left: 20px; }
+      /* line 245, source/scss/style.scss */
+      #experience .items .item .details .label, #education .items .item .details .label {
+        margin: 5px 0px 5px 15px;
+        font-size: 11px;
+        text-transform: uppercase;
+        background: #c00;
+        padding: 3px 5px;
+        color: #fff;
+        display: inline-block;
+        font-weight: 800;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px; }

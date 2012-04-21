@@ -15,432 +15,155 @@
 		%link{:rel => "stylesheet", :href => "css/style.css"}
 		%script{:src => "js/libs/modernizr-2.0.6.min.js"}
 	%body.clingwrap.texture-wood
+		.topline
+		%header
+			.container
+				%h1 Coby Chapple
+				.buttons
+					%a.twitter{:href => "http://twitter.com/cobychapple"}
+						%span Follow me on Twitter
+					%a.email{:href => "mailto:coby@cobychapple.com"}
+						%span Send me an Email
 		.page
-			.section.hero-unit.texture-graph
-				.wrap-toggle
-					%a.btn.primary.small{ :href => "#" }
-						%span Toggle Page Wrap
+			.page-title.section
+				.subsection.c2
+					%h2 Resumé
+				.subsection.c2
+					.buttons
+						%a.pdf{:href => "resume.pdf"}
+							%span Download PDF
+			#overview.section
 				.container
 					.content
-						.center
-							%h1 Introducing Chassis
-							%p A simple, responsive HTML and CSS framework using HAML and Sass.
-							.buttons
-								%a.btn.primary Download Chassis
-								%a.btn Fork on GitHub
-			.section.nav-chassis
+						%p Hi there. I’m an <strong>interface designer</strong> <span class="amp">&amp;</span> <strong>web developer</strong> based on the Gold Coast, Australia. I love working with switched-on people who recognise that <strong>quality design is the way forward</strong>.
+			#skills.section
 				.container
-					%ul
-						%li.item.active
-							%a{:href => "#"} Home
-						%li.item
-							%a{:href => "#"} Typography
-						%li.item
-							%a{:href => "#"} Grid
-						%li.item
-							%a{:href => "#"} Patterns
-						%li.item
-							%a{:href => "#"} Tables
-						%li.item
-							%a{:href => "#"} Forms
-						%li.item
-							%a{:href => "#"} Sass
-			.section.type.fifths
+					.section-title
+						%h3 Skills
+					.clearfix
+					.subsection.c1
+						.content
+							%h4 Proficiencies
+							%ul.ticks
+								%li HTML and CSS
+								%li Ruby and PHP
+								%li SQL and Javascript
+								%li Command-line
+					.subsection.c1
+						.content
+							%h4 Applications
+							%ul.ticks
+								%li Adobe Photoshop
+								%li Adobe Illustrator
+								%li Adobe InDesign
+								%li Git, Mercurial, SVN
+					.subsection.c1
+						.content
+							%h4 Platforms
+							%ul.ticks
+								%li Ruby on Rails
+								%li MVC Frameworks
+								%li Wordpress Sites
+								%li E-Commerce
+					.subsection.c1
+						.content
+							%h4 Environments
+							%ul.ticks
+								%li Mac OS X
+								%li Linux &amp; Unix
+								%li Windows Server
+								%li Cloud Infrastructure
+			#experience.section
 				.container
-					.subsection.c3
-						.content
-							%h1 Heading 1
-							%hr/
-							%p They began to meet more people. For the most part these were staring before them, murmuring indistinct questions, jaded, haggard, unclean. One man in evening dress passed them on foot, his eyes on the ground. They heard his voice, and, looking back at him, saw one hand clutched in his hair and the other beating invisible things. His paroxysm of rage over, he went on his way without once looking back.
-							%p As my brother's party went on towards the crossroads to the south of Barnet they saw a woman approaching the road across some fields on their left, carrying a child and with two other children; and then passed a man in dirty black, with a thick stick in one hand and a small portmanteau in the other. Then round the corner of the lane, from between the villas that guarded it at its confluence with the high road, came a little cart drawn by a sweating black pony and driven by a sallow youth in a bowler hat, grey with dust. There were three girls, East End factory girls, and a couple of little children crowded in the cart.
-					.subsection.c2
-						.content
-							%h2 Heading 2
-							%p Paragraphs are awesome.
-							%h3 Heading 3
-							%p Paragraphs are awesome.
-							%h4 Heading 4
-							%p Paragraphs are awesome.
-							%h5 Heading 5
-							%p Paragraphs are awesome.
-							%h6 Heading 6
-							%p Paragraphs are awesome.
-			.section.textures
+					.section-title
+						%h3 Experience
+					.clearfix
+					.items.section
+						.item
+							.summary
+								%h5
+									%strong UI Designer
+									at Worry Free Labs
+									%a{:href => "http://worryfreelabs.com/"} Visit Website &#9656;
+								%p This position involved a wide variety of interesting work for a range of high-profile clients, mostly consisting of web-based startups based in the US, but also including clients from Europe, Asia, and Australia. This position required daily collaboration and communication with other team members and clients using online project management tools.
+								.bullets
+									.list
+										%h6 Responsibilities
+										%ul.ticks
+											%li User Experience (UX) design
+											%li Inteface design
+											%li Front-end development
+									.list
+										%h6 &nbsp;
+										%ul.ticks
+											%li Client communication
+											%li Supervising junior designers
+											%li Managing client expectations
+									.list
+										%h6 Typical Projects
+										%ul.ticks
+											%li Web-based applications
+											%li Mobile inferfaces (iOS)
+											%li Website designs
+							.details
+								.date October 2011&ndash;Present
+								.location Connecticut, USA
+								.label Remote
+						.item
+							.summary
+								%h5
+									%strong Freelance
+									Web Developer <span class='amp'>&amp;</span> UI Designer
+									%a{:href => "http://cobychapple.com/hireme"} Visit Website &#9656;
+								%p Working as a sole trader, Coby provides web application development and design services to a wide range of business clients including prior employers.
+							.details
+								.date June 2008&ndash;Present
+								.location Gold Coast, Australia
+
+						.item
+							.summary
+								%h5
+									%strong Casual Analyst
+									at Deloitte Touche Tohmatsu
+									%a{:href => "http://deloitte.com.au/"} Visit Website &#9656;
+								%p Working both on and off-site, Coby has worked on a range of Technology Assurance projects for high-profile clients. Coby has also been offered a graduate position with Deloitte Risk Services, Brisbane in 2012.
+							.details
+								.date Nov 2010&ndash;July 2011
+								.location Brisbane, Australia
+
+			#education.section
 				.container
-					.section.fifths
-						.subsection.c1
-							.content
-								.texture-example.texture-wood &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-linen &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-roughcloth &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-graph &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-ricepaper &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-diagmonds &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-zigzag &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-dotnoise &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-woven &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-carbonfibre &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-linedpaper &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-crosses &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-blacklinen &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-brightsquares &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-grungewall &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-hanky &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-largemosaic &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-doublelined &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-pinstripe &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-leather &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-dotgrill &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-dotgrillbig &nbsp;
-						.subsection.c1
-							.content
-								.texture-example.texture-microcarbon &nbsp;
-							
-			.sections.display-grids
-				.container
-					.content
-						%h2.h2 5-Column Grid
-					.section
-						.content
-							%p .content
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c4
-							.content
-								%p .c4
-							.subsection.half
-								.content
-									%p Test
-							.subsection.c2
-								.content
-									%p Test
-							.subsection.c1
-								.content
-									%p Test
-					.section.fifths
-						.subsection.c4
-							.content
-								%p .c4
-						.subsection.c1
-							.content
-								%p .c1
-					.section.fifths
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c3
-							.content
-								%p .c3
-					.section.fifths
-						.subsection.c3
-							.content
-								%p .c3
-						.subsection.c2
-							.content
-								%p .c2
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c3
-							.content
-								%p .c3
-						.subsection.c1
-							.content
-								%p .c1
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c3
-							.content
-								%p .c3
-					.section.fifths
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c1
-							.content
-								%p .c1
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c1
-							.content
-								%p .c1
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c2
-							.content
-								%p .c2
-					.section.fifths
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-					.section.fifths
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-					.content
-						%h2 4-Column Grid
-					.section
-						.content
-							%p .content
-					.section
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c3
-							.content
-								%p .c3
-					.section
-						.subsection.c3
-							.content
-								%p .c3
-						.subsection.c1
-							.content
-								%p .c1
-					.section
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c2
-							.content
-								%p .c2
-					.section
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c1
-							.content
-								%p .c1
-					.section
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-					.section
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c2
-							.content
-								%p .c2
-					.section
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-					.section
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-					.content
-						%h2 3-Column Grid
-					.section.thirds
-						.content
-							%p .content
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c2
-							.content
-								%p .c2
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.c1
-							.content
-								%p .c1
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-						.subsection.half
-							.content
-								%p .half
-			.section
-				.container
-					.content
-						%p &copy; Copyright 2011 Coby Chapple.
-						%p Licensed under the <a href=" http://www.apache.org/licenses/LICENSE-2.0" title="Apache License Version 2.0">Apache License, Version 2.0</a>.
+					.section-title
+						%h3 Education
+					.clearfix
+					.items.section
+						.item
+							.summary
+								%h5
+									%strong Bachelor of IT (Network Security)
+									at Deakin University
+								%p Achieved a Grade Point Average (GPA) of <strong>6.9 out of a possible 7.0</strong> over all 22 completed subjects. The final two subjects are currently being undertaken.
+							.details
+								.date June 2012
+								.location Melbourne, Australia
+								.label Off-campus
+						.item
+							.summary
+								%h5
+									%strong Certificate IV in IT (Multimedia)
+									at BLC
+								%p Undertaken during the last two years of high-school in conjunction with work placement as a part-time IT Manager of a local business.
+							.details
+								.date 2005
+								.location Brisbane, Australia
+
+
+			%p &nbsp;
+		.section
+			.container
+				.content
+					%p &copy; Copyright 2011 Coby Chapple.
+					%p Licensed under the <a href=" http://www.apache.org/licenses/LICENSE-2.0" title="Apache License Version 2.0">Apache License, Version 2.0</a>.
 		%script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"}
 		%script{:src => "js/libs/jquery-1.6.2.min.js"}
 		:javascript
