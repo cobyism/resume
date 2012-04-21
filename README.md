@@ -1,4 +1,4 @@
-# Uberresumé
+# Uberesumé
 
 So today I started hacking together a HTML resume for myself, and I thought I might open-source it for others to use too. It's a work in progress, but when I've finished it for myself I'll make a point of putting it together with a nicer installer/usage.
 
