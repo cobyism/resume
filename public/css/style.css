@@ -1577,12 +1577,15 @@ ul.ticks {
   -webkit-box-shadow: 0px 1px 3px #555555, inset 0px 1px 0px #ffec8b;
   -moz-box-shadow: 0px 1px 3px #555555, inset 0px 1px 0px #ffec8b;
   box-shadow: 0px 1px 3px #555555, inset 0px 1px 0px #ffec8b;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
   display: block;
   float: left;
   clear: both;
   position: relative;
   left: -10px; }
-  /* line 172, source/scss/style.scss */
+  /* line 173, source/scss/style.scss */
   .page .section-title h3 {
     font-size: 14px;
     text-transform: uppercase;
@@ -1591,7 +1594,7 @@ ul.ticks {
     display: inline-block;
     padding: 5px 10px 5px 30px;
     font-weight: 800; }
-  /* line 181, source/scss/style.scss */
+  /* line 182, source/scss/style.scss */
   .page .section-title:before {
     content: "";
     position: absolute;
@@ -1602,14 +1605,14 @@ ul.ticks {
     float: left;
     background: url(../images/fold.png) top left no-repeat; }
 
-/* line 193, source/scss/style.scss */
+/* line 194, source/scss/style.scss */
 #experience, #education {
   margin-bottom: 30px; }
-  /* line 196, source/scss/style.scss */
+  /* line 197, source/scss/style.scss */
   #experience .items .item, #education .items .item {
     padding: 30px 30px 0px;
     float: left; }
-    /* line 199, source/scss/style.scss */
+    /* line 200, source/scss/style.scss */
     #experience .items .item .summary, #education .items .item .summary {
       float: left;
       width: 70%;
@@ -1622,37 +1625,37 @@ ul.ticks {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px; }
-      /* line 207, source/scss/style.scss */
+      /* line 208, source/scss/style.scss */
       #experience .items .item .summary h5, #education .items .item .summary h5 {
         color: #746e67;
         font-weight: normal;
         font-size: 24px;
         margin-bottom: 12px; }
-        /* line 212, source/scss/style.scss */
+        /* line 213, source/scss/style.scss */
         #experience .items .item .summary h5 strong, #education .items .item .summary h5 strong {
           color: #453b15;
           font-weight: 800; }
-        /* line 216, source/scss/style.scss */
+        /* line 217, source/scss/style.scss */
         #experience .items .item .summary h5 a, #education .items .item .summary h5 a {
           font-size: 11px;
           text-transform: uppercase;
           font-weight: 800; }
-      /* line 222, source/scss/style.scss */
+      /* line 223, source/scss/style.scss */
       #experience .items .item .summary .list, #education .items .item .summary .list {
         float: left;
         margin-right: 15px;
         font-size: 13px; }
-    /* line 228, source/scss/style.scss */
+    /* line 229, source/scss/style.scss */
     #experience .items .item .details, #education .items .item .details {
       float: left; }
-      /* line 230, source/scss/style.scss */
+      /* line 231, source/scss/style.scss */
       #experience .items .item .details .date, #education .items .item .details .date {
         font-size: 18px;
         font-weight: 800;
         font-style: italic;
         border-bottom: 2px solid #bdbbb3;
         padding: 10px 0px 10px 15px; }
-      /* line 237, source/scss/style.scss */
+      /* line 238, source/scss/style.scss */
       #experience .items .item .details .location, #education .items .item .details .location {
         margin: 10px 0px 5px 15px;
         font-size: 13px;
@@ -1660,7 +1663,7 @@ ul.ticks {
         font-weight: 800;
         background: url(../images/map-marker.png) 0px 50% no-repeat;
         padding-left: 20px; }
-      /* line 245, source/scss/style.scss */
+      /* line 246, source/scss/style.scss */
       #experience .items .item .details .label, #education .items .item .details .label {
         margin: 5px 0px 5px 15px;
         font-size: 11px;

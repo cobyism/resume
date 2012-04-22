@@ -164,6 +164,7 @@ ul.ticks {
 	@include vertical-gradient(#ffd500, #ffc300);
 	border: 1px solid #ae911f;
 	@include box-shadow-two(0px 1px 3px #555, inset 0px 1px 0px #ffec8b);
+	@include border-radius(0px 5px 5px 0px);
 	display: block;
 	float: left;
 	clear: both;

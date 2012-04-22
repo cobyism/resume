@@ -1,12 +1,12 @@
-# Uberesumé
+# Resumé
 
-So today I started hacking together a HTML resume for myself, and I thought I might open-source it for others to use too. It's a work in progress, but when I've finished it for myself I'll make a point of putting it together with a nicer installer/usage.
+So today I started hacking together a HTML resumé for myself, and I thought I might open-source it for others to use too. It's a work in progress, but when I've finished it for myself I'll make a point of putting it together with a nicer installer/usage.
 
 At the moment:
 
 ```sh
-$ git clone git://github.com/cobychapple/uberesume.git
-$ cd uberesume
+$ git clone git://github.com/cobychapple/resume.git
+$ cd resume
 $ rake watch
 ```
 
