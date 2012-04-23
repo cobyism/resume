@@ -1387,13 +1387,14 @@ header h1 {
   display: inline-block;
   font-weight: 800;
   text-shadow: 0px 1px 0px #fff;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  color: #353029; }
 
-/* line 41, source/scss/style.scss */
+/* line 42, source/scss/style.scss */
 header .buttons {
   float: right;
   margin-top: 45px; }
-  /* line 44, source/scss/style.scss */
+  /* line 45, source/scss/style.scss */
   header .buttons a {
     margin-left: 10px;
     padding: 5px 5px 9px;
@@ -1401,7 +1402,7 @@ header .buttons {
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: #fff; }
-    /* line 49, source/scss/style.scss */
+    /* line 50, source/scss/style.scss */
     header .buttons a.twitter {
       background: #0092e8;
       -webkit-box-shadow: inset 0px -3px 0px #0055b5, inset 0px 1px 0px #3cffff;
@@ -1419,11 +1420,11 @@ header .buttons {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00cbf5', endColorstr='#0085e4', GradientType=0);
       text-shadow: 0px 1px 0px #0055b5;
       border: 1px solid #003a4c; }
-      /* line 55, source/scss/style.scss */
+      /* line 56, source/scss/style.scss */
       header .buttons a.twitter span {
         background: url(../images/button-sprite.png) 5px 6px no-repeat;
         padding-left: 36px; }
-    /* line 60, source/scss/style.scss */
+    /* line 61, source/scss/style.scss */
     header .buttons a.email {
       background: #1da522;
       -webkit-box-shadow: inset 0px -3px 0px #007600, inset 0px 1px 0px #afffb7;
@@ -1441,27 +1442,27 @@ header .buttons {
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#71da79', endColorstr='#1da522', GradientType=0);
       border: 1px solid #034306;
       text-shadow: 0px 1px 0px #007600; }
-      /* line 66, source/scss/style.scss */
+      /* line 67, source/scss/style.scss */
       header .buttons a.email span {
         background: url(../images/button-sprite.png) 5px -33px no-repeat;
         padding-left: 36px; }
-    /* line 71, source/scss/style.scss */
+    /* line 72, source/scss/style.scss */
     header .buttons a span {
       padding: 7px 5px;
       display: inline-block;
       font-weight: bold; }
 
-/* line 79, source/scss/style.scss */
+/* line 80, source/scss/style.scss */
 .clingwrap {
-  padding: 0 inherit 2em; }
+  padding: 0 inherit 0; }
 
-/* line 83, source/scss/style.scss */
+/* line 84, source/scss/style.scss */
 .page {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   background: #fffcf0; }
-  /* line 86, source/scss/style.scss */
+  /* line 87, source/scss/style.scss */
   .page .page-title {
     background-color: #dcd9c8;
     background-repeat: repeat-x;
@@ -1479,7 +1480,7 @@ header .buttons {
     -webkit-border-radius: 10px 10px 0px 0px;
     -moz-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px; }
-    /* line 90, source/scss/style.scss */
+    /* line 91, source/scss/style.scss */
     .page .page-title h2 {
       font-weight: 800;
       font-style: italic;
@@ -1488,12 +1489,12 @@ header .buttons {
       margin-left: 10px;
       color: #353029;
       padding: 15px; }
-    /* line 100, source/scss/style.scss */
+    /* line 101, source/scss/style.scss */
     .page .page-title .buttons {
       float: right;
       margin-top: 8px;
       padding: 15px; }
-    /* line 105, source/scss/style.scss */
+    /* line 106, source/scss/style.scss */
     .page .page-title a {
       padding: 5px 5px 9px;
       -webkit-border-radius: 5px;
@@ -1501,7 +1502,7 @@ header .buttons {
       border-radius: 5px;
       font-size: 13px;
       color: #353029; }
-      /* line 110, source/scss/style.scss */
+      /* line 111, source/scss/style.scss */
       .page .page-title a.pdf {
         background: #1da522;
         -webkit-box-shadow: inset 0px -3px 0px #a09b86, inset 0px 1px 0px white;
@@ -1519,49 +1520,49 @@ header .buttons {
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e8e6dc', endColorstr='#c3bea9', GradientType=0);
         border: 1px solid #7d7a6a;
         text-shadow: 0px 1px 0px #fff; }
-        /* line 116, source/scss/style.scss */
+        /* line 117, source/scss/style.scss */
         .page .page-title a.pdf span {
           background: url(../images/button-sprite.png) 5px -74px no-repeat;
           padding-left: 36px; }
-      /* line 121, source/scss/style.scss */
+      /* line 122, source/scss/style.scss */
       .page .page-title a span {
         padding: 7px 5px;
         display: inline-block;
         font-weight: 800; }
 
-/* line 130, source/scss/style.scss */
+/* line 131, source/scss/style.scss */
 .page .content {
   color: #746e67;
   padding: 20px 30px; }
-  /* line 133, source/scss/style.scss */
+  /* line 134, source/scss/style.scss */
   .page .content h3, .page .content h4, .page .content h5, .page .content h6, .page .content strong {
     color: #57524a;
     font-weight: 800; }
-  /* line 137, source/scss/style.scss */
+  /* line 138, source/scss/style.scss */
   .page .content h4 {
     font-size: 16px; }
 
-/* line 142, source/scss/style.scss */
+/* line 143, source/scss/style.scss */
 ul.ticks {
   padding-left: 30px; }
-  /* line 144, source/scss/style.scss */
+  /* line 145, source/scss/style.scss */
   ul.ticks li {
     list-style-image: url(../images/tick.png); }
 
-/* line 149, source/scss/style.scss */
+/* line 150, source/scss/style.scss */
 .amp {
   font-family: Baskerville, "Palatino Linotype", Palatino, serif;
   font-style: italic;
   font-weight: normal; }
 
-/* line 156, source/scss/style.scss */
+/* line 157, source/scss/style.scss */
 #overview p {
   text-align: center;
   font-size: 30px;
   line-height: 36px;
   text-shadow: 0px 1px 0px #fff; }
 
-/* line 163, source/scss/style.scss */
+/* line 164, source/scss/style.scss */
 .page .section-title {
   background-color: #ffc300;
   background-repeat: repeat-x;
@@ -1585,7 +1586,7 @@ ul.ticks {
   clear: both;
   position: relative;
   left: -10px; }
-  /* line 173, source/scss/style.scss */
+  /* line 174, source/scss/style.scss */
   .page .section-title h3 {
     font-size: 14px;
     text-transform: uppercase;
@@ -1594,7 +1595,7 @@ ul.ticks {
     display: inline-block;
     padding: 5px 10px 5px 30px;
     font-weight: 800; }
-  /* line 182, source/scss/style.scss */
+  /* line 183, source/scss/style.scss */
   .page .section-title:before {
     content: "";
     position: absolute;
@@ -1605,14 +1606,14 @@ ul.ticks {
     float: left;
     background: url(../images/fold.png) top left no-repeat; }
 
-/* line 194, source/scss/style.scss */
+/* line 195, source/scss/style.scss */
 #experience, #education {
   margin-bottom: 30px; }
-  /* line 197, source/scss/style.scss */
+  /* line 198, source/scss/style.scss */
   #experience .items .item, #education .items .item {
     padding: 30px 30px 0px;
     float: left; }
-    /* line 200, source/scss/style.scss */
+    /* line 201, source/scss/style.scss */
     #experience .items .item .summary, #education .items .item .summary {
       float: left;
       width: 70%;
@@ -1625,37 +1626,42 @@ ul.ticks {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       border-radius: 3px; }
-      /* line 208, source/scss/style.scss */
+      /* line 209, source/scss/style.scss */
       #experience .items .item .summary h5, #education .items .item .summary h5 {
         color: #746e67;
         font-weight: normal;
         font-size: 24px;
         margin-bottom: 12px; }
-        /* line 213, source/scss/style.scss */
+        /* line 214, source/scss/style.scss */
         #experience .items .item .summary h5 strong, #education .items .item .summary h5 strong {
           color: #453b15;
           font-weight: 800; }
-        /* line 217, source/scss/style.scss */
+        /* line 218, source/scss/style.scss */
         #experience .items .item .summary h5 a, #education .items .item .summary h5 a {
           font-size: 11px;
           text-transform: uppercase;
           font-weight: 800; }
-      /* line 223, source/scss/style.scss */
+      /* line 224, source/scss/style.scss */
+      #experience .items .item .summary p, #education .items .item .summary p {
+        margin-bottom: 6px; }
+      /* line 227, source/scss/style.scss */
       #experience .items .item .summary .list, #education .items .item .summary .list {
         float: left;
+        margin-top: 12px;
         margin-right: 15px;
         font-size: 13px; }
-    /* line 229, source/scss/style.scss */
+    /* line 234, source/scss/style.scss */
     #experience .items .item .details, #education .items .item .details {
       float: left; }
-      /* line 231, source/scss/style.scss */
+      /* line 236, source/scss/style.scss */
       #experience .items .item .details .date, #education .items .item .details .date {
         font-size: 18px;
         font-weight: 800;
         font-style: italic;
         border-bottom: 2px solid #bdbbb3;
+        color: #453b15;
         padding: 10px 0px 10px 15px; }
-      /* line 238, source/scss/style.scss */
+      /* line 244, source/scss/style.scss */
       #experience .items .item .details .location, #education .items .item .details .location {
         margin: 10px 0px 5px 15px;
         font-size: 13px;
@@ -1663,7 +1669,7 @@ ul.ticks {
         font-weight: 800;
         background: url(../images/map-marker.png) 0px 50% no-repeat;
         padding-left: 20px; }
-      /* line 246, source/scss/style.scss */
+      /* line 252, source/scss/style.scss */
       #experience .items .item .details .label, #education .items .item .details .label {
         margin: 5px 0px 5px 15px;
         font-size: 11px;
@@ -1676,3 +1682,95 @@ ul.ticks {
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px; }
+
+/* line 269, source/scss/style.scss */
+#testimonials .items {
+  padding: 30px; }
+  /* line 271, source/scss/style.scss */
+  #testimonials .items .column {
+    float: left;
+    width: 48%; }
+  /* line 275, source/scss/style.scss */
+  #testimonials .items .column1 {
+    margin-right: 20px; }
+/* line 279, source/scss/style.scss */
+#testimonials .item {
+  padding: 0px 0px 20px; }
+  /* line 281, source/scss/style.scss */
+  #testimonials .item .quote {
+    background: #fff;
+    -webkit-box-shadow: 0px 1px 3px #777777;
+    -moz-box-shadow: 0px 1px 3px #777777;
+    box-shadow: 0px 1px 3px #777777;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    padding: 25px 25px 30px;
+    font-size: 21px;
+    font-weight: 300;
+    font-style: italic;
+    color: #746E67;
+    text-align: center;
+    font-family: "PT Serif", Georgia, serif; }
+    /* line 292, source/scss/style.scss */
+    #testimonials .item .quote strong {
+      color: #453B15;
+      background: #fff3c1;
+      font-weight: inherit;
+      font-style: italic; }
+  /* line 299, source/scss/style.scss */
+  #testimonials .item .author {
+    color: #746E67;
+    text-align: center;
+    position: relative;
+    padding: 20px 30px 0px; }
+    /* line 304, source/scss/style.scss */
+    #testimonials .item .author .name {
+      font-weight: 800;
+      color: #453B15; }
+      /* line 307, source/scss/style.scss */
+      #testimonials .item .author .name:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 48%;
+        width: 30px;
+        height: 19px;
+        float: left;
+        background: url(../images/quote-pointer.png) top left no-repeat; }
+    /* line 318, source/scss/style.scss */
+    #testimonials .item .author .position, #testimonials .item .author .company {
+      font-weight: 800; }
+
+/* line 326, source/scss/style.scss */
+#other ul {
+  padding: 0px 0px 0px 20px; }
+  /* line 328, source/scss/style.scss */
+  #other ul li {
+    list-style: disc;
+    margin-bottom: 16px;
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #c00; }
+    /* line 334, source/scss/style.scss */
+    #other ul li span {
+      color: #746E67; }
+
+/* line 342, source/scss/style.scss */
+#bottom-cta .content {
+  text-align: center; }
+/* line 345, source/scss/style.scss */
+#bottom-cta .cta {
+  font-size: 42px; }
+/* line 348, source/scss/style.scss */
+#bottom-cta dt {
+  font-weight: 800; }
+/* line 351, source/scss/style.scss */
+#bottom-cta .phone dd {
+  font-size: 36px;
+  color: #453B15;
+  line-height: 36px; }
+/* line 356, source/scss/style.scss */
+#bottom-cta .email dd {
+  font-size: 28px;
+  line-height: 36px; }
